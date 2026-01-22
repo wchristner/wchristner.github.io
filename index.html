@@ -1,0 +1,4731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Axiom | Transform Employee Insights Into Action</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://Axiomack.com/">
+  <meta name="description" content="Transform employee feedback into actionable insights. Reduce turnover, boost engagement, and build stronger teams with data-driven decisions.">
+  
+  <!-- Add Open Graph meta tags for social sharing -->
+  <meta property="og:title" content="Axiom | Transform Employee Insights Into Action">
+  <meta property="og:description" content="Cut turnover, boost morale, and make data-driven decisions with employee feedback solutions.">
+  <meta property="og:image" content="https://Axiomack.com/og-image.jpg">
+  <meta property="og:url" content="https://Axiomack.com/">
+  <meta property="og:type" content="website">
+  
+  <!-- Add favicon -->
+<link rel="icon" type="image/x-icon" href="./icon.ico">
+<link rel="shortcut icon" href="./icon.ico">
+
+  
+  <!-- Add Font Awesome for better icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #1e3a8a;
+      --primary-dark: #1e40af;
+      --primary-light: #3b82f6;
+      --secondary: #64748b;
+      --accent: #0891b2;
+      --success: #059669;
+      --warning: #d97706;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --white: #ffffff;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.12);
+      --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.1);
+      --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--gray-900);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Skip to main content link for accessibility */
+    .skip-to-content {
+      position: absolute;
+      top: -40px;
+      left: 0;
+      background: var(--primary);
+      color: white;
+      padding: 8px;
+      z-index: 9999;
+      text-decoration: none;
+    }
+
+    .skip-to-content:focus {
+      top: 0;
+    }
+
+    /* HEADER - 30% SMALLER */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      background: rgba(255, 255, 255, 0.98);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--gray-200);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transform: translateY(0);
+      height: 75px; /* Reduced from ~75px to 56px */
+      display: flex;
+      align-items: center;
+    }
+
+    header.scrolled {
+      box-shadow: var(--shadow-md);
+    }
+
+    /* Immediate hide on scroll down */
+    header.header-hidden {
+      transform: translateY(-100%);
+    }
+
+    /* Show on scroll up with smooth transition */
+    header.header-visible {
+      transform: translateY(0);
+    }
+
+    nav {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem; /* Reduced padding to make header smaller */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      width: 100%;
+      height: 100%;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem; /* Reduced gap */
+      font-size: 1rem; /* Smaller font */
+      font-weight: 700;
+      color: var(--gray-900);
+      text-decoration: none;
+      transition: opacity 0.3s;
+      height: 100%;
+    }
+
+    .logo:hover {
+      opacity: 0.9;
+    }
+
+    /* Smaller logo */
+    .logo-icon {
+      width: 140px; /* Reduced from 200px */
+      height: 126px; /* Reduced from 180px */
+      border-radius: 2px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-icon img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: contain;
+      transition: transform 0.3s;
+    }
+
+    .logo:hover .logo-icon img {
+      transform: scale(1.05);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem; /* Reduced gap */
+      align-items: center;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: var(--gray-600);
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+      position: relative;
+      padding: 0.5rem 0;
+      font-size: 0.9rem; /* Smaller font */
+    }
+
+    .nav-links a:hover {
+      color: var(--primary);
+    }
+
+    .nav-links a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--primary);
+      transition: width 0.3s;
+    }
+
+    .nav-links a:hover::after {
+      width: 100%;
+    }
+
+    /* Mobile menu button */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.25rem; /* Smaller button */
+      color: var(--gray-700);
+      cursor: pointer;
+      padding: 0.5rem;
+    }
+
+    .btn {
+      padding: 0.5rem 1.25rem; /* Smaller button */
+      border-radius: 6px;
+      font-weight: 600;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      font-size: 0.875rem; /* Smaller font */
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 2px 8px rgba(30, 58, 138, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--primary-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(30, 58, 138, 0.3);
+    }
+
+    .btn-primary:active {
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      background: white;
+      color: var(--primary);
+      border: 2px solid var(--primary);
+    }
+
+    .btn-secondary:hover {
+      background: var(--gray-50);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Adjust hero margin for smaller header */
+    .hero {
+      margin-top: 56px; /* Adjusted to match new header height */
+      min-height: calc(100vh - 56px); /* Adjusted to match new header height */
+      display: flex;
+      align-items: center;
+      background: linear-gradient(135deg, #1e3a8a 0%, #0f172a 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.08;
+    }
+
+    .hero-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 3rem 2rem; /* Slightly reduced padding */
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-text {
+      color: white;
+      animation: fadeInUp 0.8s ease-out;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 0.875rem; /* Smaller badge */
+      background: rgba(255, 255, 255, 0.15);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 50px;
+      font-size: 0.75rem; /* Smaller font */
+      font-weight: 600;
+      margin-bottom: 1rem;
+      backdrop-filter: blur(10px);
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    .hero h1 {
+      font-size: clamp(2.25rem, 5vw, 3.25rem); /* Slightly smaller */
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+      font-weight: 800;
+    }
+
+    .hero h1 span {
+      color: #60a5fa;
+      background: linear-gradient(90deg, #60a5fa, #93c5fd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.125rem; /* Slightly smaller */
+      margin-bottom: 1.75rem;
+      opacity: 0.95;
+      line-height: 1.8;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .stat {
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .stat:hover {
+      transform: translateY(-5px);
+    }
+
+    .stat-number {
+      font-size: 2rem; /* Slightly smaller */
+      font-weight: 800;
+      display: block;
+      color: #60a5fa;
+      transition: color 0.3s;
+    }
+
+    .stat:hover .stat-number {
+      color: #93c5fd;
+    }
+
+    .stat-label {
+      font-size: 0.75rem; /* Smaller font */
+      opacity: 0.9;
+      margin-top: 0.5rem;
+    }
+
+    .hero-visual {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(20px);
+      border-radius: 16px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 1.5rem; /* Reduced padding */
+      box-shadow: var(--shadow-lg);
+      animation: fadeInRight 0.8s ease-out;
+    }
+
+    @keyframes fadeInRight {
+      from {
+        opacity: 0;
+        transform: translateX(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    .dashboard-preview {
+      background: white;
+      border-radius: 12px;
+      padding: 1.25rem; /* Reduced padding */
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+    }
+
+
+    .pulse-video {
+      display: grid;
+      gap: 0.75rem;
+    }
+
+    .pulse-video-player {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: 0;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--gray-100);
+  display: block;
+}
+
+.pulse-video-fallback {
+      font-size: 0.8rem;
+      color: var(--gray-600);
+      line-height: 1.3;
+    }
+
+    .pulse-video-fallback a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    .pulse-video-fallback a:hover {
+      text-decoration: underline;
+    }
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      padding-bottom: 1rem;
+      border-bottom: 2px solid var(--gray-100);
+    }
+
+    .dashboard-title {
+      font-size: 0.875rem; /* Smaller font */
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .dashboard-badge {
+      background: var(--success);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      animation: pulse 2s infinite;
+    }
+
+    @keyframes pulse {
+      0% { opacity: 1; }
+      50% { opacity: 0.8; }
+      100% { opacity: 1; }
+    }
+
+    .metric-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.75rem; /* Reduced padding */
+      margin-bottom: 0.5rem;
+      background: var(--gray-50);
+      border-radius: 8px;
+      transition: all 0.3s;
+    }
+
+    .metric-row:hover {
+      background: #dbeafe;
+      transform: translateX(4px);
+    }
+
+    .metric-label {
+      color: var(--gray-700);
+      font-size: 0.75rem; /* Smaller font */
+      font-weight: 500;
+    }
+
+    .metric-score {
+      font-weight: 700;
+      color: var(--success);
+      font-size: 0.875rem; /* Smaller font */
+    }
+
+    /* Section Styles */
+    section {
+      padding: 4rem 2rem; /* Slightly reduced padding */
+      scroll-margin-top: 56px; /* Adjusted to new header height */
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem; /* Reduced margin */
+    }
+
+    .section-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.375rem 0.875rem; /* Smaller badge */
+      background: var(--gray-100);
+      color: var(--primary);
+      border-radius: 50px;
+      font-size: 0.75rem; /* Smaller font */
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      border: 1px solid var(--gray-200);
+    }
+
+    .section-title {
+      font-size: clamp(1.75rem, 4vw, 2.75rem); /* Slightly smaller */
+      margin-bottom: 0.75rem;
+      font-weight: 800;
+      color: var(--gray-900);
+    }
+
+    .section-subtitle {
+      font-size: 1.125rem; /* Slightly smaller */
+      color: var(--gray-600);
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Slightly smaller */
+      gap: 1.5rem; /* Reduced gap */
+    }
+
+    .feature-card {
+      background: white;
+      padding: 2rem 1.5rem; /* Reduced padding */
+      border-radius: 12px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.3s;
+      border: 1px solid var(--gray-200);
+      height: 100%;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--primary);
+    }
+
+    .feature-icon {
+      width: 56px; /* Smaller icon */
+      height: 56px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.25rem;
+      font-size: 1.5rem;
+      color: white;
+    }
+
+    .feature-title {
+      font-size: 1.25rem; /* Slightly smaller */
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      color: var(--gray-900);
+    }
+
+    .feature-description {
+      color: var(--gray-600);
+      line-height: 1.7;
+      font-size: 0.95rem; /* Slightly smaller */
+    }
+
+    /* Process Section */
+    .process-section {
+      background: var(--gray-50);
+    }
+
+    .process-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* Slightly smaller */
+      gap: 1.5rem; /* Reduced gap */
+    }
+
+    .process-step {
+      background: white;
+      padding: 2rem 1.5rem; /* Reduced padding */
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .process-step:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .step-number {
+      width: 50px; /* Smaller step number */
+      height: 50px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      font-weight: 800;
+      margin: 0 auto 1.25rem;
+      box-shadow: 0 4px 12px rgba(30, 58, 138, 0.3);
+    }
+
+    .step-title {
+      font-size: 1.125rem; /* Slightly smaller */
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--gray-900);
+    }
+
+    .step-description {
+      color: var(--gray-600);
+      line-height: 1.7;
+      font-size: 0.95rem; /* Slightly smaller */
+    }
+
+    /* About Section */
+    .about-section {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem; /* Reduced gap */
+      align-items: center;
+    }
+
+    .about-image {
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: var(--shadow-lg);
+      transition: transform 0.3s;
+    }
+
+    .about-image:hover {
+      transform: scale(1.02);
+    }
+
+    .about-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s;
+    }
+
+    .about-image:hover img {
+      transform: scale(1.05);
+    }
+
+    .about-content h3 {
+      font-size: clamp(1.5rem, 3vw, 2.25rem); /* Slightly smaller */
+      margin-bottom: 0.75rem;
+      color: var(--gray-900);
+      font-weight: 700;
+      line-height: 1.2;
+    }
+
+    .about-content p {
+      color: var(--gray-600);
+      line-height: 1.8;
+      margin-bottom: 1.25rem;
+      font-size: 1rem; /* Slightly smaller */
+    }
+
+    .about-content blockquote {
+      border-left: 4px solid var(--primary);
+      padding-left: 1.5rem;
+      margin: 1.5rem 0;
+      font-style: italic;
+      color: var(--gray-700);
+      font-size: 1.05rem; /* Slightly smaller */
+      background: var(--gray-50);
+      padding: 1.25rem;
+      border-radius: 0 8px 8px 0;
+    }
+
+    /* Testimonials */
+    .testimonials-section {
+      background: var(--gray-50);
+    }
+
+    .testimonials-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly smaller */
+      gap: 1.5rem; /* Reduced gap */
+    }
+
+    .testimonial {
+      background: white;
+      padding: 2rem 1.5rem; /* Reduced padding */
+      border-radius: 12px;
+      border: 1px solid var(--gray-200);
+      transition: all 0.3s;
+      box-shadow: var(--shadow-sm);
+      height: 100%;
+    }
+
+    .testimonial:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .testimonial-content {
+      font-size: 1rem; /* Slightly smaller */
+      line-height: 1.8;
+      color: var(--gray-700);
+      margin-bottom: 1.25rem;
+      font-style: italic;
+      position: relative;
+    }
+
+    .testimonial-content::before {
+      content: '"';
+      font-size: 3.5rem; /* Slightly smaller */
+      color: var(--gray-300);
+      position: absolute;
+      top: -20px;
+      left: -10px;
+      opacity: 0.5;
+      font-family: serif;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .author-avatar {
+      width: 50px; /* Smaller avatar */
+      height: 50px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 700;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .author-info h4 {
+      font-weight: 700;
+      color: var(--gray-900);
+      margin-bottom: 0.25rem;
+      font-size: 0.95rem; /* Slightly smaller */
+    }
+
+    .author-info p {
+      color: var(--gray-600);
+      font-size: 0.8rem; /* Slightly smaller */
+    }
+
+    /* Services Section */
+    .services-section {
+      background: white;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem; /* Reduced gap */
+    }
+
+    .service-card {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s;
+      height: 100%;
+    }
+
+    .service-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-8px);
+    }
+
+    .service-image {
+      width: 100%;
+      height: 220px; /* Slightly smaller */
+      overflow: hidden;
+    }
+
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s;
+    }
+
+    .service-card:hover .service-image img {
+      transform: scale(1.05);
+    }
+
+    .service-content {
+      padding: 2rem 1.5rem; /* Reduced padding */
+    }
+
+    .service-badge {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      padding: 0.25rem 0.75rem;
+      border-radius: 50px;
+      font-size: 0.7rem; /* Smaller font */
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .service-title {
+      font-size: 1.25rem; /* Slightly smaller */
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+      color: var(--gray-900);
+    }
+
+    .service-description {
+      color: var(--gray-600);
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+      font-size: 0.95rem; /* Slightly smaller */
+    }
+
+    .service-features {
+      list-style: none;
+      margin-top: 1.25rem;
+    }
+
+    .service-features li {
+      padding: 0.375rem 0; /* Reduced padding */
+      color: var(--gray-600);
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9rem; /* Slightly smaller */
+    }
+
+    .service-features li::before {
+      content: '✓';
+      color: var(--success);
+      font-weight: 700;
+      font-size: 1.1rem;
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--gray-800) 100%);
+      color: white;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url('https://images.unsplash.com/photo-1552664730-d307ca884978?w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      opacity: 0.1;
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: clamp(1.75rem, 4vw, 2.75rem); /* Slightly smaller */
+      margin-bottom: 1.25rem;
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .cta-section p {
+      font-size: 1.125rem; /* Slightly smaller */
+      margin-bottom: 2rem;
+      opacity: 0.95;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+      line-height: 1.7;
+    }
+
+    /* Contact Form */
+    .contact-section {
+      background: white;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem; /* Reduced gap */
+      align-items: start;
+    }
+
+    .contact-info h3 {
+      font-size: clamp(1.25rem, 2.5vw, 1.75rem); /* Slightly smaller */
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+      color: var(--gray-900);
+      line-height: 1.3;
+    }
+
+    .contact-info p {
+      color: var(--gray-600);
+      margin-bottom: 1.5rem;
+      line-height: 1.8;
+      font-size: 1rem; /* Slightly smaller */
+    }
+
+    .contact-methods {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem; /* Reduced gap */
+    }
+
+    .contact-method {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1rem; /* Reduced padding */
+      background: var(--gray-50);
+      border-radius: 12px;
+      transition: all 0.3s;
+      border: 1px solid var(--gray-200);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-method:hover {
+      background: var(--gray-100);
+      transform: translateX(8px);
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .contact-icon {
+      width: 48px; /* Smaller icon */
+      height: 48px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.25rem;
+      flex-shrink: 0;
+    }
+
+    .contact-method h4 {
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+      color: var(--gray-900);
+      font-size: 0.95rem; /* Slightly smaller */
+    }
+
+    .contact-method p {
+      color: var(--gray-600);
+      margin: 0;
+      font-size: 0.875rem; /* Slightly smaller */
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--gray-700);
+      font-size: 0.9rem; /* Slightly smaller */
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 0.75rem 1rem; /* Reduced padding */
+      border: 2px solid var(--gray-200);
+      border-radius: 8px;
+      font-size: 0.95rem;
+      transition: all 0.3s;
+      font-family: inherit;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 140px; /* Slightly smaller */
+    }
+
+    .status {
+      margin-top: 1rem;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      display: none;
+      animation: fadeIn 0.3s ease-out;
+    }
+
+    .status.success {
+      display: block;
+      background: #d1fae5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+    }
+
+    .status.error {
+      display: block;
+      background: #fee2e2;
+      color: #991b1b;
+      border: 1px solid #fecaca;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--gray-900);
+      color: white;
+      padding: 3rem 2rem 1.5rem; /* Reduced padding */
+    }
+
+    .footer-content {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr;
+      gap: 2.5rem; /* Reduced gap */
+      margin-bottom: 2.5rem;
+    }
+
+    .footer-brand h3 {
+      font-size: 1.25rem; /* Slightly smaller */
+      margin-bottom: 0.75rem;
+      font-weight: 700;
+    }
+
+    .footer-brand p {
+      color: var(--gray-300);
+      line-height: 1.7;
+      max-width: 400px;
+      font-size: 0.9rem; /* Slightly smaller */
+    }
+
+    .footer-links h4 {
+      font-size: 1rem; /* Slightly smaller */
+      margin-bottom: 1rem;
+      font-weight: 600;
+      color: white;
+    }
+
+    .footer-links ul {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 0.75rem;
+    }
+
+    .footer-links a {
+      color: var(--gray-300);
+      text-decoration: none;
+      transition: color 0.3s;
+      display: inline-block;
+      padding: 0.125rem 0;
+      font-size: 0.875rem; /* Slightly smaller */
+    }
+
+    .footer-links a:hover {
+      color: white;
+      transform: translateX(4px);
+    }
+
+    .footer-bottom {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--gray-800);
+      text-align: center;
+      color: var(--gray-300);
+      font-size: 0.75rem; /* Smaller font */
+    }
+
+    .footer-bottom a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    .footer-bottom a:hover {
+      text-decoration: underline;
+    }
+
+    /* Scroll to top button */
+    .scroll-to-top {
+      position: fixed;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 45px; /* Smaller button */
+      height: 45px;
+      background: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      z-index: 999;
+      box-shadow: var(--shadow-md);
+      transition: all 0.3s;
+    }
+
+    .scroll-to-top:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .scroll-to-top.visible {
+      display: flex;
+      animation: fadeInUp 0.3s ease-out;
+    }
+
+    /* Loading animation */
+    .loading {
+      display: inline-block;
+      width: 18px; /* Slightly smaller */
+      height: 18px;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      border-radius: 50%;
+      border-top-color: white;
+      animation: spin 1s ease-in-out infinite;
+    }
+
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .hero-content,
+      .about-grid,
+      .contact-grid,
+      .services-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .hero-content {
+        text-align: center;
+      }
+
+      .hero-buttons {
+        justify-content: center;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .mobile-menu-btn {
+        display: block;
+      }
+
+      .nav-links {
+        position: fixed;
+        top: 56px; /* Adjusted to new header height */
+        left: 0;
+        right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 1.5rem;
+        box-shadow: var(--shadow-md);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s;
+        z-index: 999;
+      }
+
+      .nav-links.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav-links a {
+        font-size: 1rem;
+        padding: 0.75rem 0;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+
+      .footer-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+      }
+
+      .footer-links {
+        text-align: center;
+      }
+
+      .footer-links ul {
+        align-items: center;
+      }
+
+      .footer-links a:hover {
+        transform: translateY(2px);
+      }
+
+      section {
+        padding: 2.5rem 1.5rem;
+      }
+
+      .testimonials-grid,
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .process-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .section-title {
+        font-size: 1.75rem;
+      }
+
+      .scroll-to-top {
+        bottom: 1rem;
+        right: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 0 1rem;
+      }
+
+      .hero-content {
+        padding: 2rem 1rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .hero-buttons .btn {
+        width: 100%;
+      }
+
+      .hero-visual {
+        padding: 1.25rem;
+      }
+
+      .feature-card,
+      .testimonial,
+      .process-step {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .service-content {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .contact-method {
+        padding: 0.875rem;
+      }
+
+      .footer-content {
+        gap: 2rem;
+      }
+    }
+  
+
+    /* =========================
+       SAMPLE REPORT (Interactive)
+       ========================= */
+    .report-section { background: white; }
+
+    .report-shell {
+      background: linear-gradient(180deg, var(--gray-50), #fff);
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      box-shadow: var(--shadow-md);
+      overflow: hidden;
+    }
+
+    .report-header {
+      display: flex;
+      gap: 1.25rem;
+      justify-content: space-between;
+      align-items: stretch;
+      padding: 1.25rem;
+      border-bottom: 1px solid var(--gray-200);
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(10px);
+    }
+
+    .report-header-left { flex: 1; display: grid; gap: 1rem; }
+
+    .report-client { display: flex; align-items: center; gap: 0.9rem; }
+
+    .report-client-badge {
+      width: 44px; height: 44px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      font-weight: 900;
+      display: grid;
+      place-items: center;
+      box-shadow: 0 8px 20px rgba(30, 58, 138, 0.25);
+    }
+
+    .report-client-name { font-weight: 900; color: var(--gray-900); line-height: 1.2; }
+    .report-client-meta { color: var(--gray-600); font-size: 0.875rem; margin-top: 0.15rem; }
+
+    .report-controls {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      align-items: end;
+    }
+
+    .report-control {
+      display: grid;
+      gap: 0.35rem;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+      min-width: 220px;
+    }
+
+    .report-control-small { min-width: 170px; }
+    .report-control-wide { min-width: min(520px, 100%); flex: 1; }
+
+    .report-control select {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      border: 2px solid var(--gray-200);
+      border-radius: 10px;
+      background: white;
+      font: inherit;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+
+    .report-control select:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+    }
+
+    .report-button-row { display: flex; gap: 0.6rem; flex-wrap: wrap; }
+
+    .report-header-right { display: flex; align-items: center; }
+
+    .report-scorecard {
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 14px;
+      padding: 1rem 1.1rem;
+      min-width: 210px;
+      text-align: center;
+      box-shadow: var(--shadow-sm);
+      transform: translateZ(0);
+    }
+
+    .report-score-number { font-size: 2.1rem; font-weight: 900; color: var(--primary); }
+    .report-score-outof { color: var(--gray-600); font-weight: 800; margin-left: 0.15rem; }
+    .report-score-label { margin-top: 0.35rem; color: var(--gray-700); font-weight: 700; font-size: 0.9rem; }
+    .report-score-sub { margin-top: 0.2rem; color: var(--gray-600); font-size: 0.85rem; }
+
+    .report-btn { border-radius: 10px; }
+
+    /* Tabs */
+    .report-tabs {
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.9rem 1.25rem;
+      border-bottom: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      overflow-x: auto;
+    }
+
+    .report-tab {
+      border: 1px solid var(--gray-200);
+      background: white;
+      color: var(--gray-700);
+      font-weight: 800;
+      border-radius: 999px;
+      padding: 0.55rem 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s, color 0.2s;
+      white-space: nowrap;
+    }
+
+    .report-tab:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-sm);
+      border-color: rgba(30, 58, 138, 0.25);
+    }
+
+    .report-tab.active {
+      color: var(--primary);
+      border-color: rgba(30, 58, 138, 0.35);
+      box-shadow: 0 8px 22px rgba(30, 58, 138, 0.10);
+    }
+
+    /* Panels */
+    .report-panels { padding: 1.25rem; }
+
+    .report-panel {
+      opacity: 0;
+      transform: translateY(6px);
+      pointer-events: none;
+      transition: opacity 0.28s ease, transform 0.28s ease;
+    }
+
+    .report-panel.active {
+      opacity: 1;
+      transform: translateY(0);
+      pointer-events: auto;
+    }
+
+    .report-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 1rem;
+    }
+
+    .report-card {
+      grid-column: span 3;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    }
+
+    .report-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-md);
+      border-color: rgba(30, 58, 138, 0.22);
+    }
+
+    .report-card-wide { grid-column: span 12; }
+
+    .report-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .report-card-header h3 {
+      font-size: 1rem;
+      font-weight: 900;
+      color: var(--gray-900);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.55rem;
+      margin: 0;
+    }
+
+    .report-muted { color: var(--gray-700); line-height: 1.75; }
+    .report-muted-small { color: var(--gray-600); font-size: 0.85rem; }
+
+    .report-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      background: rgba(8, 145, 178, 0.10);
+      color: var(--accent);
+      border: 1px solid rgba(8, 145, 178, 0.25);
+      padding: 0.35rem 0.65rem;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .delta-pill {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 54px;
+      background: rgba(5, 150, 105, 0.10);
+      color: var(--success);
+      border: 1px solid rgba(5, 150, 105, 0.25);
+      padding: 0.25rem 0.55rem;
+      border-radius: 999px;
+      font-weight: 900;
+      font-size: 0.8rem;
+    }
+
+    .delta-pill.negative {
+      background: rgba(217, 119, 6, 0.10);
+      color: var(--warning);
+      border-color: rgba(217, 119, 6, 0.25);
+    }
+
+    .kpi-number {
+      font-size: 1.9rem;
+      font-weight: 900;
+      color: var(--gray-900);
+      display: flex;
+      align-items: baseline;
+      gap: 0.25rem;
+    }
+
+    .kpi-outof { font-size: 1rem; font-weight: 900; color: var(--gray-600); }
+    .kpi-sub { margin-top: 0.35rem; color: var(--gray-600); font-size: 0.875rem; }
+
+    /* Extras */
+    .report-divider { height: 1px; background: var(--gray-200); margin: 1.05rem 0; }
+
+    .report-mini-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.85rem;
+      margin-top: 0.85rem;
+    }
+
+    .mini-stat {
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .mini-stat-label { color: var(--gray-600); font-size: 0.85rem; font-weight: 800; }
+    .mini-stat-value { font-weight: 900; color: var(--gray-900); margin-top: 0.25rem; }
+    .mini-stat-sub { color: var(--gray-700); margin-top: 0.25rem; font-size: 0.85rem; }
+
+    /* Executive Summary highlights */
+    .report-highlights {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.9rem;
+      margin-top: 1rem;
+    }
+
+    .highlight {
+      background: var(--gray-50);
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 0.95rem;
+    }
+
+    .highlight-title { font-weight: 900; color: var(--gray-900); margin-bottom: 0.45rem; font-size: 0.95rem; }
+
+    .highlight-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      color: var(--gray-700);
+    }
+
+    .highlight-list li { padding: 0.35rem 0; display: flex; gap: 0.6rem; }
+    .highlight-list li::before { content: "•"; color: var(--primary); font-weight: 900; }
+
+    /* Two column block */
+    .report-two-col {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .subcard {
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 12px;
+      padding: 0.95rem;
+    }
+
+    .subcard-title { font-weight: 900; color: var(--gray-900); margin-bottom: 0.55rem; }
+    .subcard-foot { color: var(--gray-600); font-size: 0.85rem; line-height: 1.7; margin-top: 0.6rem; }
+
+    /* Stacked participation */
+    .stacked {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.55rem;
+    }
+
+    .stacked-row {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 0.35rem;
+    }
+
+    .stacked-top {
+      display: flex;
+      justify-content: space-between;
+      gap: 0.6rem;
+      font-weight: 800;
+      color: var(--gray-800);
+      font-size: 0.9rem;
+    }
+
+    .stacked-bar {
+      height: 10px;
+      border-radius: 999px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+    }
+
+    .stacked-bar > span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width 900ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    .stacked-row.is-animated .stacked-bar > span { width: var(--w); }
+
+    /* SVG trend chart */
+    .svg-chart {
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      border-radius: 12px;
+      padding: 0.75rem;
+      min-height: 220px;
+    }
+
+    .legend-row { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 0.65rem; }
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      font-weight: 800;
+      font-size: 0.85rem;
+      color: var(--gray-700);
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+      background: var(--primary);
+    }
+
+    .legend-item.off { opacity: 0.5; }
+
+    /* Trend insights */
+    .trend-insights {
+      margin-top: 0.85rem;
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .trend-insight {
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 0.85rem;
+      box-shadow: var(--shadow-sm);
+      display: grid;
+      gap: 0.25rem;
+      animation: riseIn 450ms ease both;
+    }
+
+    .trend-insight .k {
+      font-weight: 900;
+      color: var(--gray-900);
+      display: flex;
+      align-items: center;
+      gap: 0.55rem;
+    }
+
+    .trend-insight .v {
+      color: var(--gray-700);
+      line-height: 1.7;
+    }
+
+    .trend-insight .badge {
+      margin-left: auto;
+      font-size: 0.8rem;
+      font-weight: 900;
+      padding: 0.18rem 0.5rem;
+      border-radius: 999px;
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      color: var(--gray-700);
+    }
+
+    /* Draw-on animation for trend lines */
+    @keyframes trendDraw {
+      to { stroke-dashoffset: 0; }
+    }
+
+
+    .chart-tooltip {
+      position: absolute;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 10px;
+      padding: 0.55rem 0.65rem;
+      box-shadow: var(--shadow-md);
+      font-size: 0.85rem;
+      color: var(--gray-700);
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(6px);
+      transition: opacity 0.12s ease, transform 0.12s ease;
+      z-index: 20;
+    }
+
+    .chart-tooltip.show { opacity: 1; transform: translateY(0); }
+
+    /* Mini chart bars */
+    .mini-chart {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.9rem;
+      margin-top: 0.65rem;
+    }
+
+    .bar {
+      position: relative;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      background: var(--gray-50);
+      padding: 0.85rem 0.85rem 1rem;
+      overflow: hidden;
+      cursor: default;
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+
+    .bar:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+
+    .bar-fill {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(30, 58, 138, 0.18), rgba(8, 145, 178, 0.18));
+      transform-origin: left center;
+      transform: scaleX(0);
+      transition: transform 900ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    .bar.is-animated .bar-fill { transform: scaleX(calc(var(--val) / 100)); }
+
+    .bar-label, .bar-value { position: relative; z-index: 1; display: block; font-weight: 900; }
+    .bar-label { color: var(--gray-900); }
+    .bar-value { margin-top: 0.35rem; color: var(--gray-700); font-weight: 800; }
+
+    .report-callout {
+      display: flex;
+      gap: 0.8rem;
+      align-items: flex-start;
+      background: rgba(30, 58, 138, 0.06);
+      border: 1px solid rgba(30, 58, 138, 0.15);
+      border-radius: 12px;
+      padding: 0.9rem;
+    }
+
+    .report-callout i { color: var(--primary); margin-top: 0.1rem; }
+    .callout-title { font-weight: 900; color: var(--gray-900); }
+    .callout-text { color: var(--gray-700); margin-top: 0.15rem; line-height: 1.7; }
+
+    /* Drivers */
+    .pill-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+
+    .pill {
+      border: 1px solid var(--gray-200);
+      background: white;
+      color: var(--gray-700);
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 0.35rem 0.7rem;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s, color 0.15s;
+      white-space: nowrap;
+      user-select: none;
+    }
+
+    .pill:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); border-color: rgba(30, 58, 138, 0.25); }
+    .pill.active { color: var(--primary); border-color: rgba(30, 58, 138, 0.35); background: rgba(30, 58, 138, 0.04); }
+
+    .drivers-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      align-items: start;
+    }
+
+    .driver-controls { display: grid; gap: 0.45rem; margin-bottom: 0.65rem; }
+
+    .driver-list {
+      display: grid;
+      gap: 0.65rem;
+    }
+
+    .driver-row {
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 12px;
+      padding: 0.85rem;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.75rem;
+      align-items: center;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    }
+
+    .driver-row:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); border-color: rgba(30, 58, 138, 0.22); }
+    .driver-row.active { border-color: rgba(30, 58, 138, 0.35); box-shadow: 0 10px 24px rgba(30, 58, 138, 0.10); }
+
+    .driver-name { font-weight: 900; color: var(--gray-900); }
+    .driver-sub { color: var(--gray-600); font-size: 0.85rem; margin-top: 0.2rem; }
+
+    .driver-bar {
+      height: 10px;
+      border-radius: 999px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      margin-top: 0.55rem;
+    }
+
+    .driver-bar > span {
+      display: block;
+      height: 100%;
+      width: 0;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width 900ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    .driver-row.is-animated .driver-bar > span { width: var(--w); }
+
+    .driver-score {
+      font-weight: 900;
+      color: var(--gray-800);
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      min-width: 70px;
+      text-align: center;
+    }
+
+    .driver-detail {
+      border: 1px solid var(--gray-200);
+      background: linear-gradient(180deg, rgba(30, 58, 138, 0.03), rgba(8, 145, 178, 0.02));
+      border-radius: 14px;
+      padding: 1rem;
+    }
+
+    .driver-detail-title { font-weight: 900; color: var(--gray-900); font-size: 1.05rem; }
+    .driver-detail-sub { color: var(--gray-700); margin-top: 0.3rem; line-height: 1.7; }
+
+    .driver-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+      margin-top: 0.85rem;
+    }
+
+    .metric-chip {
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 12px;
+      padding: 0.7rem;
+    }
+
+    .metric-chip .k { color: var(--gray-600); font-size: 0.82rem; font-weight: 900; }
+    .metric-chip .v { color: var(--gray-900); font-weight: 900; margin-top: 0.15rem; }
+
+    .bullet { margin: 0; padding-left: 1.1rem; color: var(--gray-700); line-height: 1.8; }
+    .chip-wrap { display: flex; flex-wrap: wrap; gap: 0.45rem; margin-top: 0.55rem; }
+
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.2rem 0.55rem;
+      border-radius: 999px;
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      font-weight: 900;
+      font-size: 0.8rem;
+      color: var(--gray-700);
+    }
+
+    .chip-good { border-color: rgba(5, 150, 105, 0.25); background: rgba(5, 150, 105, 0.10); color: var(--success); }
+    .chip-warn { border-color: rgba(217, 119, 6, 0.25); background: rgba(217, 119, 6, 0.10); color: var(--warning); }
+
+    /* Questions */
+    .question-toolbar {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      align-items: end;
+      margin-bottom: 0.85rem;
+    }
+
+    .search {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border: 2px solid var(--gray-200);
+      background: white;
+      border-radius: 12px;
+      padding: 0.55rem 0.75rem;
+      min-width: min(520px, 100%);
+    }
+
+    .search i { color: var(--gray-500); }
+
+    .search input {
+      border: none;
+      outline: none;
+      width: 100%;
+      font: inherit;
+      color: var(--gray-800);
+      background: transparent;
+    }
+
+    .question-list { display: grid; gap: 0.65rem; }
+
+    .accordion {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      background: white;
+      overflow: hidden;
+      transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+    }
+
+    .accordion:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); border-color: rgba(30, 58, 138, 0.22); }
+
+    .accordion-head {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 0.85rem;
+      padding: 0.85rem;
+      cursor: pointer;
+      align-items: center;
+    }
+
+    .q-title { font-weight: 900; color: var(--gray-900); }
+    .q-meta { display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: flex-end; align-items: center; }
+
+    .q-score {
+      font-weight: 900;
+      color: var(--gray-800);
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      min-width: 72px;
+      text-align: center;
+    }
+
+    .q-delta {
+      font-weight: 900;
+      border-radius: 999px;
+      padding: 0.25rem 0.55rem;
+      border: 1px solid rgba(5, 150, 105, 0.25);
+      background: rgba(5, 150, 105, 0.10);
+      color: var(--success);
+      min-width: 64px;
+      text-align: center;
+    }
+
+    .q-delta.neg {
+      border-color: rgba(217, 119, 6, 0.25);
+      background: rgba(217, 119, 6, 0.10);
+      color: var(--warning);
+    }
+
+    .accordion-body {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+      background: var(--gray-50);
+      border-top: 1px solid var(--gray-200);
+    }
+
+    .accordion.open .accordion-body { max-height: 460px; }
+
+    .accordion-body-inner { padding: 0.85rem; display: grid; gap: 0.75rem; }
+
+    .dist {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 0.55rem;
+    }
+
+    .dist-item {
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 12px;
+      padding: 0.65rem;
+      text-align: center;
+    }
+
+    .dist-item .n { font-weight: 900; color: var(--gray-900); }
+    .dist-item .l { color: var(--gray-600); font-size: 0.8rem; margin-top: 0.15rem; }
+
+    /* Themes */
+    .theme-list { display: grid; gap: 0.75rem; }
+
+    .theme-row {
+      display: grid;
+      grid-template-columns: 1.25fr 2.75fr auto;
+      gap: 0.9rem;
+      align-items: center;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 0.85rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+      cursor: pointer;
+    }
+
+    .theme-row:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+    .theme-title { font-weight: 900; color: var(--gray-900); }
+    .theme-sub { color: var(--gray-600); font-size: 0.85rem; margin-top: 0.2rem; }
+
+    .theme-meter {
+      height: 10px;
+      border-radius: 999px;
+      background: var(--gray-100);
+      border: 1px solid var(--gray-200);
+      overflow: hidden;
+      position: relative;
+    }
+
+    .theme-meter > span {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+      transition: width 900ms cubic-bezier(.2,.9,.2,1);
+    }
+
+    .theme-row.is-animated .theme-meter > span { width: var(--w); }
+
+    .theme-weight {
+      font-weight: 900;
+      color: var(--gray-700);
+      font-size: 0.9rem;
+    }
+
+    /* Quote rotator */
+    .quote-rotator {
+      border: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      border-radius: 12px;
+      padding: 1rem;
+      min-height: 120px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .quote {
+      opacity: 0;
+      transform: translateY(8px);
+      transition: opacity 0.25s ease, transform 0.25s ease;
+      position: absolute;
+      inset: 1rem;
+      color: var(--gray-700);
+      line-height: 1.75;
+      font-style: italic;
+    }
+
+    .quote.active { opacity: 1; transform: translateY(0); }
+
+    .quote-controls { margin-top: 0.75rem; display: flex; gap: 0.6rem; }
+
+    /* Actions table */
+    .action-toolbar {
+      display: flex;
+      gap: 0.85rem;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+    }
+
+    .action-table {
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .action-table-extended .action-row {
+      grid-template-columns: 2.1fr 1fr 0.9fr 0.7fr 0.9fr 1fr;
+    }
+
+    .action-row {
+      display: grid;
+      grid-template-columns: 2.2fr 1fr 0.6fr 1fr;
+      gap: 0.75rem;
+      padding: 0.85rem;
+      background: white;
+      border-bottom: 1px solid var(--gray-200);
+      align-items: center;
+    }
+
+    .action-row:last-child { border-bottom: none; }
+
+    .action-head {
+      background: var(--gray-50);
+      font-weight: 900;
+      color: var(--gray-900);
+    }
+
+    .status-select {
+      width: 100%;
+      padding: 0.55rem 0.65rem;
+      border: 2px solid var(--gray-200);
+      border-radius: 10px;
+      background: white;
+      font-weight: 800;
+      color: var(--gray-800);
+    }
+
+    .status-select:focus {
+      outline: none;
+      border-color: rgba(30, 58, 138, 0.35);
+      box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.12);
+    }
+
+    .metric-bullets {
+      margin: 0;
+      padding-left: 1.1rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+    }
+
+    /* Timeline */
+    .timeline { display: grid; gap: 0.9rem; margin-top: 0.4rem; }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 18px 1fr;
+      gap: 0.9rem;
+      align-items: start;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 12px;
+      padding: 1rem;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .timeline-item:hover { transform: translateY(-2px); box-shadow: var(--shadow-sm); }
+
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      margin-top: 0.4rem;
+    }
+
+    .timeline-title { font-weight: 900; color: var(--gray-900); margin-bottom: 0.25rem; }
+
+    .timeline-content ul {
+      margin: 0.35rem 0 0;
+      padding-left: 1.1rem;
+      color: var(--gray-700);
+      line-height: 1.8;
+    }
+
+    /* Appendix */
+    .appendix-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+    }
+
+    /* Drawer + Modal */
+    .icon-btn {
+      border: 1px solid var(--gray-200);
+      background: white;
+      border-radius: 10px;
+      padding: 0.45rem 0.6rem;
+      cursor: pointer;
+      transition: transform 0.15s, box-shadow 0.15s, border-color 0.15s;
+      color: var(--gray-700);
+    }
+
+    .icon-btn:hover { transform: translateY(-1px); box-shadow: var(--shadow-sm); border-color: rgba(30, 58, 138, 0.22); }
+
+    .drawer, .modal { position: relative; }
+
+    .drawer[aria-hidden="true"], .modal[aria-hidden="true"] { display: none; }
+
+    .drawer-overlay, .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.35);
+      backdrop-filter: blur(2px);
+      opacity: 0;
+      animation: fadeIn 0.18s ease forwards;
+      z-index: 1000;
+    }
+
+    @keyframes fadeIn { to { opacity: 1; } }
+
+    .drawer-panel {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100vh;
+      width: min(520px, 92vw);
+      background: white;
+      border-left: 1px solid var(--gray-200);
+      box-shadow: -10px 0 32px rgba(15, 23, 42, 0.22);
+      transform: translateX(18px);
+      animation: slideIn 0.2s ease forwards;
+      z-index: 1001;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    .modal-panel {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%) translateY(10px);
+      width: min(900px, 94vw);
+      max-height: 90vh;
+      overflow: auto;
+      background: white;
+      border: 1px solid var(--gray-200);
+      border-radius: 16px;
+      box-shadow: 0 18px 44px rgba(15, 23, 42, 0.25);
+      animation: popIn 0.2s ease forwards;
+      z-index: 1001;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+    }
+
+    @keyframes slideIn { to { transform: translateX(0); } }
+    @keyframes popIn { to { transform: translate(-50%, -50%) translateY(0); } }
+
+    .drawer-header, .modal-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 0.75rem;
+      padding: 1rem;
+      border-bottom: 1px solid var(--gray-200);
+      background: var(--gray-50);
+    }
+
+    .drawer-title, .modal-title { font-weight: 900; color: var(--gray-900); font-size: 1.05rem; }
+    .drawer-sub, .modal-sub { color: var(--gray-600); font-size: 0.85rem; margin-top: 0.2rem; }
+
+    .drawer-body, .modal-body { padding: 1rem; }
+
+    .drawer-metrics {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.65rem;
+    }
+
+    .drawer-footer, .modal-footer {
+      padding: 1rem;
+      border-top: 1px solid var(--gray-200);
+      background: var(--gray-50);
+      display: flex;
+      gap: 0.65rem;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.9rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .report-card { grid-column: span 6; }
+      .report-card-wide { grid-column: span 12; }
+      .drivers-layout { grid-template-columns: 1fr; }
+      .report-two-col { grid-template-columns: 1fr; }
+      .driver-metrics { grid-template-columns: repeat(3, 1fr); }
+    }
+
+    @media (max-width: 768px) {
+      .report-header { flex-direction: column; }
+      .report-scorecard { width: 100%; }
+      .report-controls { align-items: stretch; }
+      .report-control, .report-control-small, .report-control-wide { min-width: 100%; }
+      .report-highlights { grid-template-columns: 1fr; }
+      .mini-chart { grid-template-columns: 1fr; }
+      .report-mini-grid { grid-template-columns: 1fr; }
+      .report-card { grid-column: span 12; }
+      .action-table-extended .action-row { grid-template-columns: 1fr; }
+      .appendix-grid { grid-template-columns: 1fr; }
+      .modal-grid { grid-template-columns: 1fr; }
+      .driver-metrics { grid-template-columns: 1fr; }
+      .drawer-metrics { grid-template-columns: 1fr; }
+    }
+
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header id="header" class="header-visible">
+    <nav>
+      <a href="#" class="logo" aria-label="Axiom Feedback Home">
+        <div class="logo-icon">
+           <img src="logo.png" alt="Axiom Feedback logo">
+        </div>
+      </a>
+
+      <button class="mobile-menu-btn" aria-label="Toggle navigation menu">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#process">How It Works</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Results</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" aria-label="Get started with Axiom Feedback">Get Started</button>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="main-content">
+    <div class="hero-content">
+      <div class="hero-text">
+        <span class="hero-badge"><i class="fas fa-star"></i> Professional Employee Feedback Solutions</span>
+        <h1>Turn Employee <span>Feedback</span> Into Forward Motion</h1>
+        <p>Cut turnover, boost morale, and make data-driven decisions by transforming employee voices into clear, actionable insights.</p>
+        <div class="hero-buttons">
+          <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" aria-label="Start your journey with Axiom">
+            <i class="fas fa-rocket"></i> Start Your Journey
+          </button>
+          <button class="btn btn-secondary" onclick="document.getElementById('process').scrollIntoView({behavior: 'smooth'})" aria-label="Learn how Axiom works">
+            <i class="fas fa-play-circle"></i> See How It Works
+          </button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">40%</span>
+            <span class="stat-label">Reduction in Turnover</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">3-7</span>
+            <span class="stat-label">Days to Insights</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">95%</span>
+            <span class="stat-label">Client Satisfaction</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="dashboard-preview">
+          
+          <div class="pulse-video">
+  <video class="pulse-video-player" controls autoplay muted loop playsinline preload="metadata">
+    <source src="feedback.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="pulse-video-fallback">
+  </div>
+</div>
+        </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-bullseye"></i> Our Approach</span>
+        <h2 class="section-title">Everything You Need to Transform Feedback</h2>
+        <p class="section-subtitle">Comprehensive tools and services designed to capture, analyze, and act on employee insights effectively.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-clipboard-check"></i></div>
+          <h3 class="feature-title">Anonymous Surveys</h3>
+          <p class="feature-description">Custom-designed surveys that encourage honest feedback. Quick, engaging, and built to match your company culture and goals.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-bar"></i></div>
+          <h3 class="feature-title">Real-Time Analytics</h3>
+          <p class="feature-description">Transform raw data into clear visuals, trends, and sentiment analysis. See patterns emerge without drowning in spreadsheets.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-comments"></i></div>
+          <h3 class="feature-title">1-on-1 Interviews</h3>
+          <p class="feature-description">Professional facilitators conduct private conversations to uncover the "why" behind the data—trust gaps, barriers, and hidden opportunities.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-tasks"></i></div>
+          <h3 class="feature-title">Actionable Reports</h3>
+          <p class="feature-description">Focused insights with prioritized recommendations. No fluff—just clear direction your leadership team can act on immediately.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+          <h3 class="feature-title">Progress Tracking</h3>
+          <p class="feature-description">Follow-up surveys at 3, 6, and 9 months to measure improvement and ensure your initiatives are making real impact.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon"><i class="fas fa-shield-alt"></i></div>
+          <h3 class="feature-title">Confidential by Default</h3>
+          <p class="feature-description">We use practical safeguards and limit access to feedback data. Your employees' privacy is our top priority.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="process-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-cogs"></i> How It Works</span>
+        <h2 class="section-title">Simple Process, Powerful Results</h2>
+        <p class="section-subtitle">From initial consultation to ongoing improvement—we guide you every step of the way.</p>
+      </div>
+      <div class="process-steps">
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <h3 class="step-title">Discovery Call</h3>
+          <p class="step-description">We learn about your challenges, goals, and team structure to design the perfect feedback strategy.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <h3 class="step-title">Custom Survey Design</h3>
+          <p class="step-description">We create tailored questions that match your language, culture, and specific pain points.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <h3 class="step-title">Data Collection</h3>
+          <p class="step-description">Anonymous surveys and optional 1-on-1 interviews capture honest, actionable feedback from your team.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <h3 class="step-title">Analysis & Insights</h3>
+          <p class="step-description">We transform responses into clear visuals, sentiment trends, and prioritized action items.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <h3 class="step-title">Action & Implementation</h3>
+          <p class="step-description">Receive a comprehensive report with specific recommendations your leadership can implement immediately.</p>
+        </div>
+        <div class="process-step">
+          <div class="step-number">6</div>
+          <h3 class="step-title">Track Progress</h3>
+          <p class="step-description">Follow-up assessments at 3, 6, and 9 months ensure your changes are working and engagement is improving.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image">
+          <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=800&q=80" alt="Professional team discussion in modern office" loading="lazy">
+        </div>
+        <div class="about-content">
+          <span class="section-badge"><i class="fas fa-info-circle"></i> About Axiom</span>
+          <h3>Built from years of watching feedback go unused</h3>
+          <p>I'm William Christner, founder of Axiom. After years on IT contracts across different companies, I kept seeing the same pattern: employees had ideas, frustrations, and solutions—but their voices rarely made it to leadership, and survey results vanished into Excel.</p>
+          <p>I started Axiomlose that gap. Our mission is simple: make it easy for people to speak honestly, and make it just as easy for leaders to act on what they hear—with clear insights, practical recommendations, and follow-up tracking to see if changes work.</p>
+          <blockquote>"When employees are heard, leaders succeed."<br><span style="font-size: 0.85rem; margin-top: 0.5rem; display: block;">— William Christner, Founder</span></blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="services-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-concierge-bell"></i> Our Services</span>
+        <h2 class="section-title">Tailored Feedback Solutions</h2>
+        <p class="section-subtitle">Whether you're remote, hybrid, or onsite, we combine secure surveys with personalized insights to fit your culture.</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80" alt="Digital dashboard showing analytics" loading="lazy">
+          </div>
+          <div class="service-content">
+            <span class="service-badge">Online Platform</span>
+            <h3 class="service-title">Secure, Anonymous Surveys</h3>
+            <p class="service-description">Build stronger teams with smarter feedback. Axiom combines fast, customizable surveys with candid responses, transformed into clear, actionable reports.</p>
+            <ul class="service-features">
+              <li>Custom question design aligned with your voice</li>
+              <li>Anonymous collection to encourage honesty</li>
+              <li>Real-time analytics and trend visualization</li>
+              <li>Automated follow-ups at 3, 6, and 9 months</li>
+            </ul>
+          </div>
+        </div>
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80" alt="Professional one-on-one meeting" loading="lazy">
+          </div>
+          <div class="service-content">
+            <span class="service-badge">Face-to-Face</span>
+            <h3 class="service-title">One-on-One Discussions</h3>
+            <p class="service-description">Expert facilitators conduct private conversations that uncover the real "why" behind the data. These interviews reveal trust gaps, leadership challenges, and early signs of burnout.</p>
+            <ul class="service-features">
+              <li>Professional, trained facilitators</li>
+              <li>Confidential conversation environment</li>
+              <li>Deep insights beyond survey data</li>
+              <li>Translated into actionable themes</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+<section id="testimonials" class="testimonials-section" aria-labelledby="testimonials-title">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-badge"><i class="fas fa-award" aria-hidden="true"></i> Client Success</span>
+      <h2 id="testimonials-title" class="section-title">What Our Customers Say</h2>
+      <p class="section-subtitle">
+        Axiom helps teams improve satisfaction, delivery, and retention by putting employee insight at the center of decisions.
+      </p>
+    </div>
+
+    <div class="testimonials-grid" role="list">
+      <figure class="testimonial" role="listitem">
+        <blockquote class="testimonial-content">
+          “We needed a recurring check-in that didn’t bog people down. Axiom’s 6- and 9-month pulse program delivered clear priorities and one-page action briefs. Within one cycle, communication improved and on-time delivery jumped.”
+        </blockquote>
+        <figcaption class="testimonial-author">
+          <div class="author-avatar" aria-label="Jordan Williams initials">JW</div>
+          <div class="author-info">
+            <h4>Jordan Williams</h4>
+            <p>CEO, BrightPath Media</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial" role="listitem">
+        <blockquote class="testimonial-content">
+          “Focus groups and 1:1 interviews uncovered friction our surveys kept missing. Axiom helped us prioritize fixes, test them quickly, and roll out what worked. The result was a smoother intake process and better day-to-day workflows.”
+        </blockquote>
+        <figcaption class="testimonial-author">
+          <div class="author-avatar" aria-label="Ellen Miller initials">EM</div>
+          <div class="author-info">
+            <h4>Ellen Miller</h4>
+            <p>COO, Lakefront Precision Fabrication</p>
+          </div>
+        </figcaption>
+      </figure>
+
+      <figure class="testimonial" role="listitem">
+        <blockquote class="testimonial-content">
+          “Quarterly pulses made it easy to see what mattered most and track leadership follow-through. The dashboards turned feedback into decisions—not just another report—and helped us reduce attrition in high-risk teams.”
+        </blockquote>
+        <figcaption class="testimonial-author">
+          <div class="author-avatar" aria-label="Maya Torres initials">MT</div>
+          <div class="author-info">
+            <h4>Maya Torres</h4>
+            <p>VP of Operations, Northbridge Logistics Group</p>
+          </div>
+        </figcaption>
+      </figure>
+    </div>
+
+    <div class="testimonials-cta">
+      <a class="btn btn-primary" href="#sample-report">Check out a Sample Report</a>
+    </div>
+  </div>
+</section>
+
+
+  <!-- CTA Section -->
+  <section class="cta-section">
+    <div class="container">
+      <div class="cta-content">
+        <h2>Ready to Transform Your Workplace?</h2>
+        <p>Join leading organizations who've reduced turnover and boosted engagement by putting employee feedback at the center of their strategy.</p>
+        <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" aria-label="Schedule a discovery call with Axiom">
+          <i class="fas fa-calendar-alt"></i> Schedule a Discovery Call
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Sample Report Section (Interactive) -->
+  <section id="sample-report" class="report-section" aria-labelledby="report-title">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-file-alt" aria-hidden="true"></i> Sample Deliverable</span>
+        <h2 id="report-title" class="section-title">Employee Feedback Report (Sample)</h2>
+        <p class="section-subtitle">
+          A deeper, leadership-ready report with drivers, question-level detail, themes, and a tracked action plan. Use the filters to explore.
+        </p>
+      </div>
+
+      <div class="report-shell" aria-label="Interactive sample report">
+        <!-- Report Header -->
+        <div class="report-header">
+          <div class="report-header-left">
+            <div class="report-client">
+              <div class="report-client-badge" aria-label="Client initials">LPF</div>
+              <div>
+                <div class="report-client-name">Lakefront Precision Fabrication</div>
+                <div class="report-client-meta" id="reportMeta">Q4 Pulse • 72 responses • 86% response rate</div>
+              </div>
+            </div>
+
+            <div class="report-controls" role="group" aria-label="Report controls">
+              <label class="report-control">
+                <span>Department</span>
+                <select id="deptSelect" aria-label="Select department for report view">
+                  <option value="All" selected>All Departments</option>
+                  <option value="Production">Production</option>
+                  <option value="Office">Office</option>
+                  <option value="Maintenance">Maintenance</option>
+                  <option value="Shipping">Shipping</option>
+                </select>
+              </label>
+
+              <label class="report-control report-control-small">
+                <span>Period</span>
+                <select id="periodSelect" aria-label="Select reporting period">
+                  <option value="Q4" selected>Q4 Pulse</option>
+                  <option value="Q3">Q3 Pulse (compare)</option>
+                </select>
+              </label>
+
+              <div class="report-control report-control-wide">
+                <span>Quick actions</span>
+                <div class="report-button-row">
+                  <button class="btn btn-secondary report-btn" type="button" id="methodologyBtn" aria-label="Open methodology">
+                    <i class="fas fa-circle-info" aria-hidden="true"></i> Methodology
+                  </button>
+                  <button class="btn btn-secondary report-btn" type="button" id="exportJsonBtn" aria-label="Export sample report JSON">
+                    <i class="fas fa-download" aria-hidden="true"></i> Export JSON
+                  </button>
+                  <button class="btn btn-secondary report-btn" type="button" id="exportCsvBtn" aria-label="Export action plan CSV">
+                    <i class="fas fa-file-csv" aria-hidden="true"></i> Export Actions
+                  </button>
+                </div>
+              </div>
+
+              <button class="btn btn-secondary report-btn" type="button" id="copySummaryBtn" aria-label="Copy executive summary">
+                <i class="fas fa-copy" aria-hidden="true"></i> Copy Summary
+              </button>
+            </div>
+          </div>
+
+          <div class="report-header-right">
+            <div class="report-scorecard" aria-label="Overall report rating">
+              <div class="report-score">
+                <span class="report-score-number" id="overallScore">4.3</span>
+                <span class="report-score-outof">/ 5.0</span>
+              </div>
+              <div class="report-score-label">Overall Experience</div>
+              <div class="report-score-sub" id="overallSub">Last pulse: 4.0</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tabs -->
+        <div class="report-tabs" role="tablist" aria-label="Sample report tabs">
+          <button class="report-tab active" role="tab" aria-selected="true" aria-controls="panel-overview" id="tab-overview" data-tab="overview">
+            <i class="fas fa-chart-pie" aria-hidden="true"></i> Overview
+          </button>
+          <button class="report-tab" role="tab" aria-selected="false" aria-controls="panel-drivers" id="tab-drivers" data-tab="drivers">
+            <i class="fas fa-sliders" aria-hidden="true"></i> Drivers
+          </button>
+          <button class="report-tab" role="tab" aria-selected="false" aria-controls="panel-questions" id="tab-questions" data-tab="questions">
+            <i class="fas fa-list" aria-hidden="true"></i> Questions
+          </button>
+          <button class="report-tab" role="tab" aria-selected="false" aria-controls="panel-themes" id="tab-themes" data-tab="themes">
+            <i class="fas fa-layer-group" aria-hidden="true"></i> Themes
+          </button>
+          <button class="report-tab" role="tab" aria-selected="false" aria-controls="panel-actions" id="tab-actions" data-tab="actions">
+            <i class="fas fa-list-check" aria-hidden="true"></i> Action Plan
+          </button>
+          <button class="report-tab" role="tab" aria-selected="false" aria-controls="panel-timeline" id="tab-timeline" data-tab="timeline">
+            <i class="fas fa-road" aria-hidden="true"></i> 30/60/90
+          </button>
+          <button class="report-tab" role="tab" aria-selected="false" aria-controls="panel-appendix" id="tab-appendix" data-tab="appendix">
+            <i class="fas fa-paperclip" aria-hidden="true"></i> Appendix
+          </button>
+        </div>
+
+        <!-- Panels -->
+        <div class="report-panels">
+          <!-- OVERVIEW -->
+          <div class="report-panel active" role="tabpanel" id="panel-overview" aria-labelledby="tab-overview" tabindex="0">
+            <div class="report-grid">
+              <!-- Executive Summary -->
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-bullseye" aria-hidden="true"></i> Executive Summary</h3>
+                  <span class="report-pill" id="riskPill"><i class="fas fa-shield-alt" aria-hidden="true"></i> Moderate Risk</span>
+                </div>
+                <p class="report-muted" id="execSummary"></p>
+
+                <div class="report-highlights">
+                  <div class="highlight">
+                    <div class="highlight-title">What’s working</div>
+                    <ul class="highlight-list" id="whatsWorking"></ul>
+                  </div>
+                  <div class="highlight">
+                    <div class="highlight-title">Top blockers</div>
+                    <ul class="highlight-list" id="topBlockers"></ul>
+                  </div>
+                </div>
+
+                <div class="report-divider"></div>
+
+                <div class="report-mini-grid">
+                  <div class="mini-stat">
+                    <div class="mini-stat-label">Participation</div>
+                    <div class="mini-stat-value"><span id="respCount">72</span> responses</div>
+                    <div class="mini-stat-sub">Response rate: <strong id="respRate">86%</strong></div>
+                  </div>
+                  <div class="mini-stat">
+                    <div class="mini-stat-label">Confidence</div>
+                    <div class="mini-stat-value" id="confidenceLabel">High</div>
+                    <div class="mini-stat-sub">Sufficient volume for decisions</div>
+                  </div>
+                  <div class="mini-stat">
+                    <div class="mini-stat-label">Top Opportunity</div>
+                    <div class="mini-stat-value" id="topOpportunity">Shift handoff clarity</div>
+                    <div class="mini-stat-sub">Fastest lift within 2–4 weeks</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- KPI Row -->
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-heart-pulse" aria-hidden="true"></i> Engagement</h3>
+                  <span class="delta-pill" id="kpiEngDelta">+0.3</span>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-number"><span class="countup" id="kpiEng">4.2</span><span class="kpi-outof">/5</span></div>
+                  <div class="kpi-sub">Overall sentiment + clarity</div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-thumbs-up" aria-hidden="true"></i> eNPS</h3>
+                  <span class="delta-pill" id="kpiNpsDelta">+9</span>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-number"><span class="countup" id="kpiNps">18</span></div>
+                  <div class="kpi-sub">Promoters − Detractors</div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Turnover Risk</h3>
+                  <span class="delta-pill negative" id="kpiRiskDelta">-4%</span>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-number"><span class="countup" id="kpiRisk">12</span><span class="kpi-outof">%</span></div>
+                  <div class="kpi-sub">Likely to leave in 6 months</div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-user-check" aria-hidden="true"></i> Manager Trust</h3>
+                  <span class="delta-pill" id="kpiTrustDelta">+0.2</span>
+                </div>
+                <div class="kpi">
+                  <div class="kpi-number"><span class="countup" id="kpiTrust">4.1</span><span class="kpi-outof">/5</span></div>
+                  <div class="kpi-sub">Consistency & follow-through</div>
+                </div>
+              </div>
+
+              <!-- Trend + Participation -->
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-chart-line" aria-hidden="true"></i> Trend (Last 4 Pulses)</h3>
+                  <span class="report-muted-small">Hover points for values</span>
+                </div>
+
+                <div class="report-two-col">
+                  <div>
+                    <div class="svg-chart" id="trendChart" aria-label="Trend chart"></div>
+                    <div class="legend-row" id="trendLegend"></div>
+                    <div class="trend-insights" id="trendInsights" aria-label="Key insights from the trend chart"></div>
+                  </div>
+                  <div>
+                    <div class="subcard">
+                      <div class="subcard-title">Participation by Department</div>
+                      <div class="stacked" id="deptStack" aria-label="Participation by department"></div>
+                      <div class="subcard-foot" id="deptStackFoot">Production is the largest segment; suppressing segments under 5 responses in real delivery.</div>
+                    </div>
+
+                    <div class="subcard" style="margin-top: 0.9rem;">
+                      <div class="subcard-title">Sentiment Distribution</div>
+                      <div class="mini-chart" aria-label="Sentiment distribution chart">
+                        <div class="bar" data-label="Positive" id="barPos" style="--val: 58;">
+                          <span class="bar-fill"></span>
+                          <span class="bar-label">Positive</span>
+                          <span class="bar-value"><span id="valPos">58</span>%</span>
+                        </div>
+                        <div class="bar" data-label="Neutral" id="barNeu" style="--val: 28;">
+                          <span class="bar-fill"></span>
+                          <span class="bar-label">Neutral</span>
+                          <span class="bar-value"><span id="valNeu">28</span>%</span>
+                        </div>
+                        <div class="bar" data-label="Negative" id="barNeg" style="--val: 14;">
+                          <span class="bar-fill"></span>
+                          <span class="bar-label">Negative</span>
+                          <span class="bar-value"><span id="valNeg">14</span>%</span>
+                        </div>
+                      </div>
+                      <div class="report-callout" style="margin-top: 0.85rem;">
+                        <i class="fas fa-lightbulb" aria-hidden="true"></i>
+                        <div>
+                          <div class="callout-title">Key insight</div>
+                          <div class="callout-text" id="calloutInsight"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- DRIVERS -->
+          <div class="report-panel" role="tabpanel" id="panel-drivers" aria-labelledby="tab-drivers" tabindex="0" hidden>
+            <div class="report-grid">
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-sliders" aria-hidden="true"></i> Key Drivers of Engagement</h3>
+                  <span class="report-muted-small">Modeled from survey patterns (sample data)</span>
+                </div>
+
+                <div class="drivers-layout">
+                  <div>
+                    <div class="driver-controls">
+                      <div class="pill-row">
+                        <button class="pill active" type="button" data-driver-view="impact" aria-label="Sort by impact">Impact</button>
+                        <button class="pill" type="button" data-driver-view="gap" aria-label="Sort by gap">Gap</button>
+                        <button class="pill" type="button" data-driver-view="momentum" aria-label="Sort by momentum">Momentum</button>
+                      </div>
+                      <div class="report-muted-small">Click a driver for details + recommended experiments.</div>
+                    </div>
+
+                    <div class="driver-list" id="driverList"></div>
+                  </div>
+
+                  <div>
+                    <div class="driver-detail" id="driverDetail" aria-live="polite">
+                      <div class="driver-detail-title" id="driverDetailTitle">Select a driver</div>
+                      <div class="driver-detail-sub" id="driverDetailSub">We’ll show why it matters, what it affects, and actions to test.</div>
+
+                      <div class="driver-metrics" id="driverMetrics"></div>
+                      <div class="report-divider"></div>
+
+                      <div class="driver-actions">
+                        <div class="subcard-title">Recommended Experiments</div>
+                        <ul class="bullet" id="driverActions"></ul>
+                      </div>
+
+                      <div class="report-divider"></div>
+                      <div>
+                        <div class="subcard-title">Affected Questions</div>
+                        <div class="chip-wrap" id="driverQuestions"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- QUESTIONS -->
+          <div class="report-panel" role="tabpanel" id="panel-questions" aria-labelledby="tab-questions" tabindex="0" hidden>
+            <div class="report-grid">
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-list" aria-hidden="true"></i> Question-Level Results</h3>
+                  <span class="report-muted-small">Search and expand to view distributions</span>
+                </div>
+
+                <div class="question-toolbar">
+                  <div class="search">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input id="qSearch" type="text" placeholder="Search questions (e.g., 'handoff', 'recognition', 'leadership')" aria-label="Search questions" />
+                  </div>
+                  <label class="report-control report-control-small" style="min-width: 220px;">
+                    <span>Category</span>
+                    <select id="qCategory" aria-label="Filter by category">
+                      <option value="All" selected>All</option>
+                    </select>
+                  </label>
+                </div>
+
+                <div class="question-list" id="questionList"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- THEMES -->
+          <div class="report-panel" role="tabpanel" id="panel-themes" aria-labelledby="tab-themes" tabindex="0" hidden>
+            <div class="report-grid">
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-tags" aria-hidden="true"></i> Themes</h3>
+                  <span class="report-muted-small">Weighted by frequency × impact • Click a theme to drill down</span>
+                </div>
+
+                <div class="theme-list" id="themeList"></div>
+
+                <div class="report-muted-small" style="margin-top: 0.75rem;">
+                  Note: Comments are anonymized and grouped to protect privacy while preserving meaning.
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-comment-dots" aria-hidden="true"></i> Comment Carousel</h3>
+                </div>
+
+                <div class="quote-rotator" aria-live="polite">
+                  <div class="quote active" id="quote0"></div>
+                  <div class="quote" id="quote1"></div>
+                  <div class="quote" id="quote2"></div>
+                </div>
+
+                <div class="quote-controls">
+                  <button class="btn btn-secondary report-btn" type="button" id="prevQuote" aria-label="Previous comment"><i class="fas fa-chevron-left"></i></button>
+                  <button class="btn btn-secondary report-btn" type="button" id="nextQuote" aria-label="Next comment"><i class="fas fa-chevron-right"></i></button>
+                </div>
+
+                <div class="report-divider"></div>
+
+                <div class="subcard">
+                  <div class="subcard-title">Quality Safeguards</div>
+                  <ul class="bullet">
+                    <li>Suppress small segments to reduce re-identification risk</li>
+                    <li>Group similar comments (preserve meaning, remove identifiers)</li>
+                    <li>We recommend a mix of quick wins and structural fixes</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ACTIONS -->
+          <div class="report-panel" role="tabpanel" id="panel-actions" aria-labelledby="tab-actions" tabindex="0" hidden>
+            <div class="report-grid">
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-list-check" aria-hidden="true"></i> Action Plan + Tracker</h3>
+                  <span class="report-pill"><i class="fas fa-stopwatch" aria-hidden="true"></i> Designed for 2–6 weeks</span>
+                </div>
+
+                <div class="action-toolbar">
+                  <div class="report-muted-small">Update status to simulate tracking. Saves locally in your browser (localStorage).</div>
+                  <div class="pill-row" style="justify-content: flex-end;">
+                    <button class="pill active" type="button" data-action-filter="All">All</button>
+                    <button class="pill" type="button" data-action-filter="Not Started">Not Started</button>
+                    <button class="pill" type="button" data-action-filter="In Progress">In Progress</button>
+                    <button class="pill" type="button" data-action-filter="Done">Done</button>
+                  </div>
+                </div>
+
+                <div class="action-table action-table-extended" role="table" aria-label="Action plan tracker">
+                  <div class="action-row action-head" role="row">
+                    <div role="columnheader">Action</div>
+                    <div role="columnheader">Owner</div>
+                    <div role="columnheader">Due</div>
+                    <div role="columnheader">Effort</div>
+                    <div role="columnheader">Impact</div>
+                    <div role="columnheader">Status</div>
+                  </div>
+                  <div id="actionRows"></div>
+                </div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-circle-check" aria-hidden="true"></i> Success Metrics</h3>
+                </div>
+                <ul class="metric-bullets" id="successMetrics"></ul>
+
+                <div class="report-divider"></div>
+                <div class="subcard">
+                  <div class="subcard-title">Recommended cadence</div>
+                  <ul class="bullet">
+                    <li>Weekly “Top-3 blockers” update</li>
+                    <li>2 leadership floor walks/week</li>
+                    <li>Close the loop on suggestions within 10 business days</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TIMELINE -->
+          <div class="report-panel" role="tabpanel" id="panel-timeline" aria-labelledby="tab-timeline" tabindex="0" hidden>
+            <div class="report-grid">
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-road" aria-hidden="true"></i> 30 / 60 / 90-Day Plan</h3>
+                  <span class="report-muted-small">A realistic implementation rhythm for busy teams</span>
+                </div>
+
+                <div class="timeline" id="timelineList"></div>
+              </div>
+
+              <div class="report-card">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-lock" aria-hidden="true"></i> Privacy Notes</h3>
+                </div>
+                <p class="report-muted" id="privacyNote"></p>
+                <button class="btn btn-primary report-btn" type="button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                  <i class="fas fa-calendar-alt"></i> Get Your Report
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- APPENDIX -->
+          <div class="report-panel" role="tabpanel" id="panel-appendix" aria-labelledby="tab-appendix" tabindex="0" hidden>
+            <div class="report-grid">
+              <div class="report-card report-card-wide">
+                <div class="report-card-header">
+                  <h3><i class="fas fa-paperclip" aria-hidden="true"></i> Appendix</h3>
+                  <span class="report-muted-small">Definitions, methodology, and reporting notes</span>
+                </div>
+
+                <div class="appendix-grid">
+                  <div class="subcard">
+                    <div class="subcard-title">Score definitions</div>
+                    <ul class="bullet">
+                      <li><strong>Engagement</strong>: composite of intent to stay + pride + day-to-day experience</li>
+                      <li><strong>Manager Trust</strong>: consistency, fairness, follow-through</li>
+                      <li><strong>Turnover Risk</strong>: % likely to leave in 6 months (self-report)</li>
+                      <li><strong>eNPS</strong>: promoters − detractors (0–10 recommend scale)</li>
+                    </ul>
+                  </div>
+
+                  <div class="subcard">
+                    <div class="subcard-title">Anonymity safeguards</div>
+                    <ul class="bullet">
+                      <li>Suppress segments smaller than a threshold</li>
+                      <li>Remove identifiers and consolidate quotes</li>
+                      <li>Report themes, not individuals</li>
+                    </ul>
+                  </div>
+
+                  <div class="subcard">
+                    <div class="subcard-title">Deliverables</div>
+                    <ul class="bullet">
+                      <li>Executive summary + heatmap & trend</li>
+                      <li>Theme drilldowns with recommended experiments</li>
+                      <li>Action plan with owners, due dates, and tracking</li>
+                      <li>Optional: manager toolkit + talk track</li>
+                    </ul>
+                  </div>
+
+                  <div class="subcard">
+                    <div class="subcard-title">Next step</div>
+                    <p class="report-muted">If you’d like a real report tailored to your teams, we can run a quick discovery and recommend the right mix of pulse + interviews.</p>
+                    <button class="btn btn-primary report-btn" type="button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                      <i class="fas fa-calendar-alt"></i> Schedule a Discovery Call
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Panels -->
+
+        <!-- Theme Drilldown Drawer -->
+        <div class="drawer" id="themeDrawer" aria-hidden="true">
+          <div class="drawer-overlay" data-drawer-close></div>
+          <div class="drawer-panel" role="dialog" aria-modal="true" aria-label="Theme details">
+            <div class="drawer-header">
+              <div>
+                <div class="drawer-title" id="drawerTitle">Theme</div>
+                <div class="drawer-sub" id="drawerSub">Details</div>
+              </div>
+              <button class="icon-btn" type="button" data-drawer-close aria-label="Close theme details"><i class="fas fa-xmark"></i></button>
+            </div>
+
+            <div class="drawer-body">
+              <div class="drawer-metrics" id="drawerMetrics"></div>
+
+              <div class="report-divider"></div>
+              <div class="subcard-title">What we heard</div>
+              <ul class="bullet" id="drawerQuotes"></ul>
+
+              <div class="report-divider"></div>
+              <div class="subcard-title">Recommended actions</div>
+              <ul class="bullet" id="drawerActions"></ul>
+            </div>
+
+            <div class="drawer-footer">
+              <button class="btn btn-secondary report-btn" type="button" data-drawer-close>
+                Close
+              </button>
+              <button class="btn btn-primary report-btn" type="button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                <i class="fas fa-calendar-alt"></i> Get a Real Report
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Methodology Modal -->
+        <div class="modal" id="methodologyModal" aria-hidden="true">
+          <div class="modal-overlay" data-modal-close></div>
+          <div class="modal-panel" role="dialog" aria-modal="true" aria-label="Methodology">
+            <div class="modal-header">
+              <div>
+                <div class="modal-title">Methodology (Sample)</div>
+                <div class="modal-sub">How data is collected, summarized, and protected</div>
+              </div>
+              <button class="icon-btn" type="button" data-modal-close aria-label="Close methodology"><i class="fas fa-xmark"></i></button>
+            </div>
+            <div class="modal-body">
+              <div class="modal-grid">
+                <div class="subcard">
+                  <div class="subcard-title">Collection</div>
+                  <ul class="bullet">
+                    <li>Pulse survey + optional open-text comments</li>
+                    <li>Optional focus groups or 1:1 interviews (add-on)</li>
+                    <li>Anonymous links; no raw lists shared with leadership</li>
+                  </ul>
+                </div>
+                <div class="subcard">
+                  <div class="subcard-title">Analysis</div>
+                  <ul class="bullet">
+                    <li>Scores by question + category</li>
+                    <li>Trend tracking across pulses</li>
+                    <li>Theme clustering for comments (privacy-protective)</li>
+                  </ul>
+                </div>
+                <div class="subcard">
+                  <div class="subcard-title">Reporting</div>
+                  <ul class="bullet">
+                    <li>Executive summary + key drivers</li>
+                    <li>Action plan with owners and due dates</li>
+                    <li>“You said / We did” recap template</li>
+                  </ul>
+                </div>
+                <div class="subcard">
+                  <div class="subcard-title">Privacy</div>
+                  <ul class="bullet">
+                    <li>Suppress small segments (k-anonymity style)</li>
+                    <li>Remove identifiers and consolidate quotes</li>
+                    <li>Deliver themes, not individuals</li>
+                  </ul>
+                </div>
+              </div>
+              <p class="report-muted" style="margin-top: 0.85rem;">
+                This interactive report uses <strong>sample data</strong> and is meant to show the format and depth of deliverables.
+              </p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn btn-secondary report-btn" type="button" data-modal-close>Close</button>
+              <button class="btn btn-primary report-btn" type="button" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+                <i class="fas fa-calendar-alt"></i> Schedule a Discovery Call
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-badge"><i class="fas fa-envelope"></i> Get In Touch</span>
+        <h2 class="section-title">Start a Conversation</h2>
+        <p class="section-subtitle">Share a bit about your organization and what you'd like to improve. We'll follow up with a short call or email to explore the right feedback approach for your teams.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h3>Let's discuss your goals</h3>
+          <p>Whether you're dealing with high turnover, low morale, or just want to strengthen your culture, we're here to help you turn employee voices into meaningful action.</p>
+          <div class="contact-methods">
+            <a href="mailto:William@Axiomack.com" class="contact-method">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <h4>Email Us</h4>
+                <p>William@Axiomack.com</p>
+              </div>
+            </a>
+            <a href="tel:+12193792086" class="contact-method">
+              <div class="contact-icon"><i class="fas fa-phone"></i></div>
+              <div>
+                <h4>Call Us</h4>
+                <p>+1 (219) 379-2086</p>
+              </div>
+            </a>
+            <div class="contact-method">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <h4>Location</h4>
+                <p>Northwest Indiana, USA</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div>
+          <form id="contactForm" action="https://formsubmit.co/william@Axiomack.com" method="POST">
+            <input type="hidden" name="_subject" value="New Contact Form Submission - Axiom">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            
+            <div class="form-group">
+              <label for="name">Name *</label>
+              <input type="text" id="name" name="name" required placeholder="Your full name" aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required placeholder="your@email.com" aria-required="true">
+            </div>
+            <div class="form-group">
+              <label for="company">Company / Organization</label>
+              <input type="text" id="company" name="company" placeholder="Your company name (optional)">
+            </div>
+            <div class="form-group">
+              <label for="message">How can we help? *</label>
+              <textarea id="message" name="message" required placeholder="Tell us about your goals, challenges, or what you'd like to learn..." aria-required="true"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;" id="submitBtn">
+              <span id="submitText">Send Message</span>
+              <span id="submitLoading" class="loading" style="display: none;"></span>
+            </button>
+            <div id="status" class="status"></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>Axiom Feedback</h3>
+        <p>Turning employee feedback into forward motion. We help leaders cut turnover, boost morale, and make data-driven decisions.</p>
+      </div>
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#process">How It Works</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Case Studies</a></li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <h4>Company</h4>
+        <ul>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> Axiom. All rights reserved. | <a href="https://Axiomfeedback.com">AxiomackFeedback.com</a></p>
+    </div>
+  </footer>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-to-top" id="scrollToTop" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script>
+    // Set current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Header scroll effect - hide immediately when scrolling down
+    let lastScrollY = window.scrollY;
+    const header = document.getElementById('header');
+    let scrollTimeout;
+
+    window.addEventListener('scroll', () => {
+      const currentScrollY = window.scrollY;
+      
+      // Clear any existing timeout
+      clearTimeout(scrollTimeout);
+      
+      // Determine scroll direction
+      const scrollingDown = currentScrollY > lastScrollY;
+      
+      // Immediately hide header when scrolling down
+      if (scrollingDown && currentScrollY > 10) { // Small threshold to prevent hiding at very top
+        header.classList.remove('header-visible');
+        header.classList.add('header-hidden');
+      } 
+      // Show header when scrolling up
+      else if (!scrollingDown) {
+        header.classList.remove('header-hidden');
+        header.classList.add('header-visible');
+      }
+      
+      // Shadow effect when scrolled
+      if (currentScrollY > 20) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      lastScrollY = currentScrollY;
+
+      // Show/hide scroll to top button
+      const scrollToTopBtn = document.getElementById('scrollToTop');
+      if (currentScrollY > 300) {
+        scrollToTopBtn.classList.add('visible');
+      } else {
+        scrollToTopBtn.classList.remove('visible');
+      }
+    });
+
+    // Mobile menu toggle
+    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const navLinks = document.querySelector('.nav-links');
+
+    mobileMenuBtn.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      mobileMenuBtn.innerHTML = navLinks.classList.contains('active') 
+        ? '<i class="fas fa-times"></i>' 
+        : '<i class="fas fa-bars"></i>';
+    });
+
+    // Close mobile menu when clicking a link
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => {
+        navLinks.classList.remove('active');
+        mobileMenuBtn.innerHTML = '<i class="fas fa-bars"></i>';
+      });
+    });
+
+    // Scroll to top functionality
+    document.getElementById('scrollToTop').addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+
+    // Form submission with better UX
+    document.getElementById('contactForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      
+      const status = document.getElementById('status');
+      const submitBtn = document.getElementById('submitBtn');
+      const submitText = document.getElementById('submitText');
+      const submitLoading = document.getElementById('submitLoading');
+      const form = this;
+      
+      // Get form values
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const message = document.getElementById('message').value.trim();
+      
+      // Validation
+      if (!name || !email || !message) {
+        status.className = 'status error';
+        status.textContent = 'Please fill in all required fields.';
+        status.style.display = 'block';
+        return;
+      }
+      
+      // Email validation
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        status.className = 'status error';
+        status.textContent = 'Please enter a valid email address.';
+        status.style.display = 'block';
+        return;
+      }
+      
+      // Show loading state
+      submitText.style.display = 'none';
+      submitLoading.style.display = 'inline-block';
+      submitBtn.disabled = true;
+      
+      try {
+        // In a real implementation, you would send the form data to your server
+        // For now, we'll simulate a successful submission
+        await new Promise(resolve => setTimeout(resolve, 1500));
+        
+        // Show success message
+        status.className = 'status success';
+        status.textContent = 'Thank you! Your message has been sent. We\'ll be in touch within 24 hours.';
+        status.style.display = 'block';
+        
+        // Reset form
+        form.reset();
+        
+        // Hide success message after 5 seconds
+        setTimeout(() => {
+          status.style.display = 'none';
+        }, 5000);
+        
+      } catch (error) {
+        status.className = 'status error';
+        status.textContent = 'Sorry, there was an error sending your message. Please try again or email us directly.';
+        status.style.display = 'block';
+      } finally {
+        // Reset button state
+        submitText.style.display = 'inline';
+        submitLoading.style.display = 'none';
+        submitBtn.disabled = false;
+      }
+    });
+
+
+
+    /* =========================
+       SAMPLE REPORT (Interactive)
+       ========================= */
+
+    (function initSampleReport() {
+      const root = document.getElementById('sample-report');
+      if (!root) return;
+
+      const $ = (id) => document.getElementById(id);
+      const $$ = (sel, el=document) => Array.from(el.querySelectorAll(sel));
+
+      // -------------------------
+      // Sample data (deeper)
+      // -------------------------
+      const DATA = {
+        All: {
+          meta: { period: 'Q4', responses: 72, responseRate: 86, lastOverall: 4.0 },
+          overall: 4.3,
+          risk: 'Moderate Risk',
+          confidence: 'High',
+          topOpportunity: 'Shift handoff clarity',
+          summary:
+            'Teams are generally positive about leadership intent and peer collaboration. The largest friction points are shift-to-shift handoffs, inconsistent priorities, and slow follow-through on recurring shop-floor blockers. The fastest wins are: (1) weekly leadership visibility on top 3 issues, (2) standardized handoff checklist, and (3) closing the loop on suggestions within 10 business days.',
+          working: [
+            'Strong peer support on the floor',
+            'Safety communication is improving',
+            'Clearer weekly production targets'
+          ],
+          blockers: [
+            'Handoff gaps between shifts',
+            'Parts availability & reorder timing',
+            'Inconsistent escalation paths'
+          ],
+          kpis: { engagement: 4.2, enps: 18, risk: 12, trust: 4.1 },
+          deltas: { engagement: '+0.3', enps: '+9', risk: '-4%', trust: '+0.2' },
+          sentiment: { pos: 58, neu: 28, neg: 14 },
+          insight: 'Negative sentiment is concentrated around handoffs and parts availability—two fixable operational levers.',
+          participation: [
+            { dept: 'Production', n: 39 },
+            { dept: 'Shipping', n: 14 },
+            { dept: 'Maintenance', n: 9 },
+            { dept: 'Office', n: 10 }
+          ],
+          trend: [
+            { label: 'Q1', engagement: 3.9, trust: 3.8, risk: 18 },
+            { label: 'Q2', engagement: 4.0, trust: 3.9, risk: 16 },
+            { label: 'Q3', engagement: 3.9, trust: 3.9, risk: 16 },
+            { label: 'Q4', engagement: 4.2, trust: 4.1, risk: 12 }
+          ],
+          drivers: [
+            {
+              id: 'handoff',
+              name: 'Shift handoff clarity',
+              why: 'When handoffs are consistent, teams spend less time rework/recovery and more time on throughput.',
+              impact: 86,
+              gap: 24,
+              momentum: 12,
+              corr: 0.62,
+              affected: ['Q1', 'Q3', 'Q7'],
+              actions: [
+                'Adopt a 60-second handoff checklist + visible board',
+                'Define “ready” criteria before work is passed',
+                'Review the top 3 handoff misses weekly (10 minutes)'
+              ]
+            },
+            {
+              id: 'followthrough',
+              name: 'Leadership follow-through',
+              why: 'Employees disengage when recurring issues stay open; closure builds trust quickly.',
+              impact: 74,
+              gap: 18,
+              momentum: 9,
+              corr: 0.58,
+              affected: ['Q2', 'Q5', 'Q9'],
+              actions: [
+                'Publish weekly “Top-3 blockers” with owners + due dates',
+                'Close the loop within 10 business days (even if “not yet”)',
+                'Do two short floor walks/week focused on removal of blockers'
+              ]
+            },
+            {
+              id: 'parts',
+              name: 'Parts availability & staging',
+              why: 'Stoppages create frustration and overtime; predictable staging reduces stress and defects.',
+              impact: 69,
+              gap: 22,
+              momentum: 6,
+              corr: 0.51,
+              affected: ['Q4', 'Q6', 'Q8'],
+              actions: [
+                'Set min/max thresholds on top 20 parts',
+                'Add a simple “blocked due to parts” code to track waste',
+                'Pilot a daily 10-minute staging check'
+              ]
+            },
+            {
+              id: 'priority',
+              name: 'Priority clarity',
+              why: 'Clear priorities reduce “thrash” and improve on-time delivery.',
+              impact: 61,
+              gap: 14,
+              momentum: 15,
+              corr: 0.46,
+              affected: ['Q3', 'Q5', 'Q10'],
+              actions: [
+                'Post weekly targets early in the week',
+                'Limit mid-week priority pivots unless urgent',
+                'Use one escalation path for conflicts'
+              ]
+            }
+          ],
+          questions: [
+            { id:'Q1', cat:'Operations', text:'Shift handoffs are consistent and reduce rework.', score:3.6, delta:+0.4, dist:[12,18,22,28,20] },
+            { id:'Q2', cat:'Leadership', text:'Leadership follows through on the issues that matter most.', score:3.7, delta:+0.3, dist:[10,18,25,28,19] },
+            { id:'Q3', cat:'Clarity', text:'I understand the top priorities for my team this week.', score:3.8, delta:+0.5, dist:[8,16,23,30,23] },
+            { id:'Q4', cat:'Operations', text:'I have the tools/parts I need to do my job effectively.', score:3.5, delta:+0.2, dist:[14,20,24,24,18] },
+            { id:'Q5', cat:'Manager', text:'My manager communicates clearly and supports my success.', score:4.1, delta:+0.2, dist:[5,10,18,32,35] },
+            { id:'Q6', cat:'Operations', text:'Issues that block work are escalated and resolved quickly.', score:3.6, delta:+0.3, dist:[12,18,24,28,18] },
+            { id:'Q7', cat:'Quality', text:'Quality expectations are clear and consistent across shifts.', score:4.0, delta:+0.1, dist:[6,11,18,33,32] },
+            { id:'Q8', cat:'Workload', text:'My workload feels manageable most weeks.', score:3.9, delta:+0.2, dist:[7,12,20,32,29] },
+            { id:'Q9', cat:'Culture', text:'I feel comfortable raising issues without negative consequences.', score:4.2, delta:+0.1, dist:[4,9,14,30,43] },
+            { id:'Q10', cat:'Recognition', text:'Good work is recognized in a fair and timely way.', score:3.7, delta:+0.4, dist:[9,16,24,30,21] }
+          ],
+          themes: [
+            {
+              id: 't1',
+              title: 'Shift handoff clarity',
+              sub: 'Checklist + ownership reduces rework',
+              w: 86,
+              freq: 34,
+              neg: 42,
+              quotes: [
+                'Shift handoff is where things slip—notes aren’t consistent and small issues become big ones.',
+                'A short checklist would stop the same problems repeating across shifts.',
+                'If we had one place to capture blockers, rework would drop fast.'
+              ],
+              actions: [
+                'Pilot a 60-second handoff checklist on one line',
+                'Define “ready” criteria before work transfers',
+                'Review handoff misses weekly with owners'
+              ]
+            },
+            {
+              id: 't2',
+              title: 'Parts availability',
+              sub: 'Thresholds + alerts prevent stoppages',
+              w: 74,
+              freq: 27,
+              neg: 38,
+              quotes: [
+                'We lose time waiting on parts that should have been staged.',
+                'If reorder thresholds were consistent, we wouldn’t scramble late.',
+                'Stoppages create stress and quality misses.'
+              ],
+              actions: [
+                'Set min/max thresholds for top 20 parts',
+                'Daily staging check (10 minutes)',
+                'Track “blocked due to parts” to quantify impact'
+              ]
+            },
+            {
+              id: 't3',
+              title: 'Leadership follow-through',
+              sub: 'Close the loop within 10 days',
+              w: 68,
+              freq: 22,
+              neg: 30,
+              quotes: [
+                'We talk about the same problems but don’t see closure.',
+                'Even a “not yet” update would help—silence feels like nothing changed.',
+                'Top issues need owners and due dates.'
+              ],
+              actions: [
+                'Publish weekly “Top-3 blockers” with owners/dates',
+                'Close loop within 10 business days',
+                'Do two short floor walks/week focused on blockers'
+              ]
+            },
+            {
+              id: 't4',
+              title: 'Priority clarity',
+              sub: 'Reduce thrash and improve delivery',
+              w: 61,
+              freq: 19,
+              neg: 24,
+              quotes: [
+                'Priorities shift mid-week and it’s hard to plan.',
+                'If priorities were posted early, we could move faster.',
+                'Escalation path isn’t consistent when priorities conflict.'
+              ],
+              actions: [
+                'Post weekly priorities early',
+                'Limit priority pivots unless urgent',
+                'Use one escalation path for conflicts'
+              ]
+            }
+          ],
+          actions: [
+            { id:'A1', title:'Standardize shift handoff using a 60-second checklist + visible board', owner:'Ops Lead', due:'2026-02-06', effort:'Low', impact:'High', status:'Not Started' },
+            { id:'A2', title:'Publish weekly Top-3 blockers (assign owners + close loop within 10 business days)', owner:'GM', due:'2026-01-30', effort:'Low', impact:'High', status:'In Progress' },
+            { id:'A3', title:'Set parts reorder thresholds + backup supplier list for top 20 parts', owner:'Purchasing', due:'2026-02-20', effort:'Med', impact:'High', status:'Not Started' },
+            { id:'A4', title:'Manager check-ins (10 minutes weekly focused on clarity + follow-through)', owner:'Supervisors', due:'2026-02-13', effort:'Med', impact:'Med', status:'Not Started' },
+            { id:'A5', title:'Create a simple escalation path and post it at point-of-work', owner:'Operations', due:'2026-02-06', effort:'Low', impact:'Med', status:'Done' }
+          ],
+          successMetrics: [
+            'Reduce handoff-related defects by 15%',
+            'Cut “blocked time” by 10% within 30 days',
+            'Improve Manager Trust score to 4.3+ by next pulse',
+            'Increase eNPS by +5 within 90 days'
+          ],
+          timeline: {
+            d30: ['Launch handoff checklist + train leads', 'Publish weekly “Top-3 blockers” update', 'Confirm escalation path (who owns what)'],
+            d60: ['Add reorder thresholds + simple alerts', 'Pilot one improvement per theme (small experiments)', 'Leadership visibility: 2 floor walks/week'],
+            d90: ['Measure impact and standardize what worked', 'Run follow-up pulse survey + compare deltas', 'Publish “You said / We did” recap to staff']
+          },
+          privacyNote:
+            'Sample report is anonymized. In real delivery, we group comments and suppress small segments to prevent re-identification.'
+        },
+
+        // Department overrides (lighter; the detailed lists still render well)
+        Production: {
+          meta: { period: 'Q4', responses: 39, responseRate: 83, lastOverall: 3.9 },
+          overall: 4.1,
+          risk: 'Moderate Risk',
+          confidence: 'High',
+          topOpportunity: 'Shift handoff clarity',
+          summary:
+            'Production teams report strong teamwork but feel day-to-day priorities shift too often. Handoff notes and parts availability drive the majority of negative comments. The quickest wins: standard handoff checklist + reorder thresholds.',
+          kpis: { engagement: 4.1, enps: 14, risk: 14, trust: 4.0 },
+          deltas: { engagement: '+0.2', enps: '+6', risk: '-3%', trust: '+0.1' },
+          sentiment: { pos: 54, neu: 29, neg: 17 },
+          insight: 'Most friction comes from handoffs and staging—operational fixes will move the needle fastest.'
+        },
+        Office: {
+          meta: { period: 'Q4', responses: 10, responseRate: 92, lastOverall: 4.2 },
+          overall: 4.5,
+          risk: 'Low Risk',
+          confidence: 'Medium',
+          topOpportunity: 'Cross-team alignment',
+          summary:
+            'Office feedback is positive overall. The top opportunity is better cross-team visibility into production blockers and clearer project priority signals during busy weeks.',
+          kpis: { engagement: 4.4, enps: 26, risk: 8, trust: 4.3 },
+          deltas: { engagement: '+0.4', enps: '+11', risk: '-2%', trust: '+0.3' },
+          sentiment: { pos: 66, neu: 26, neg: 8 },
+          insight: 'Office teams are stable; focus on cross-team alignment and fewer priority pivots.'
+        },
+        Maintenance: {
+          meta: { period: 'Q4', responses: 9, responseRate: 78, lastOverall: 3.8 },
+          overall: 4.0,
+          risk: 'Moderate Risk',
+          confidence: 'Medium',
+          topOpportunity: 'Triage & escalation',
+          summary:
+            'Maintenance feedback highlights reactive work and unclear escalation. Wins: create a simple triage queue and publish response expectations.',
+          kpis: { engagement: 4.0, enps: 10, risk: 15, trust: 3.9 },
+          deltas: { engagement: '+0.1', enps: '+4', risk: '-2%', trust: '+0.1' },
+          sentiment: { pos: 50, neu: 32, neg: 18 },
+          insight: 'Create a triage queue + response expectations to reduce chaos and frustration.'
+        },
+        Shipping: {
+          meta: { period: 'Q4', responses: 14, responseRate: 84, lastOverall: 4.0 },
+          overall: 4.2,
+          risk: 'Moderate Risk',
+          confidence: 'High',
+          topOpportunity: 'Cutoff times',
+          summary:
+            'Shipping reports strong hustle but wants clearer daily priority calls and fewer last-minute changes. Wins: cutoff times and clearer handoff signals.',
+          kpis: { engagement: 4.1, enps: 16, risk: 13, trust: 4.0 },
+          deltas: { engagement: '+0.2', enps: '+7', risk: '-3%', trust: '+0.1' },
+          sentiment: { pos: 56, neu: 30, neg: 14 },
+          insight: 'Cutoff times + better handoff signals reduce last-minute stress and rework.'
+        }
+      };
+
+      // -------------------------
+      // State
+      // -------------------------
+      let dept = 'All';
+      let period = 'Q4';
+      let driverView = 'impact';
+      let actionFilter = 'All';
+
+      // Local storage for action statuses
+      const LS_KEY = 'axiom_sample_actions_v1';
+      function loadActionState() {
+        try {
+          const raw = localStorage.getItem(LS_KEY);
+          return raw ? JSON.parse(raw) : {};
+        } catch {
+          return {};
+        }
+      }
+      function saveActionState(state) {
+        try { localStorage.setItem(LS_KEY, JSON.stringify(state)); } catch {}
+      }
+
+      function getDeptData() {
+        const base = DATA.All;
+        const d = DATA[dept] || {};
+        // Merge (shallow for most properties; arrays use base unless overridden)
+        return {
+          ...base,
+          ...d,
+          meta: { ...base.meta, ...(d.meta || {}) },
+          kpis: { ...base.kpis, ...(d.kpis || {}) },
+          deltas: { ...base.deltas, ...(d.deltas || {}) },
+          sentiment: { ...base.sentiment, ...(d.sentiment || {}) },
+        };
+      }
+
+      // -------------------------
+      // Utilities
+      // -------------------------
+      function clamp(n, a, b){ return Math.max(a, Math.min(b, n)); }
+
+      function animateCountUp(el, to, duration = 650) {
+        const from = 0;
+        const start = performance.now();
+        const isFloat = String(to).includes('.');
+        function frame(now) {
+          const t = Math.min(1, (now - start) / duration);
+          const eased = 1 - Math.pow(1 - t, 3);
+          const v = from + (to - from) * eased;
+          el.textContent = isFloat ? v.toFixed(1) : Math.round(v);
+          if (t < 1) requestAnimationFrame(frame);
+        }
+        requestAnimationFrame(frame);
+      }
+
+      function setList(ul, items) {
+        ul.innerHTML = '';
+        items.forEach(text => {
+          const li = document.createElement('li');
+          li.textContent = text;
+          ul.appendChild(li);
+        });
+      }
+
+      function formatDelta(n) {
+        const s = (n >= 0 ? '+' : '') + n.toFixed(1);
+        return s;
+      }
+
+      // -------------------------
+      // Overview render
+      // -------------------------
+      function renderOverview(d) {
+        $('reportMeta').textContent = `${period} Pulse • ${d.meta.responses} responses • ${d.meta.responseRate}% response rate`;
+        $('overallScore').textContent = d.overall.toFixed(1);
+        $('overallSub').textContent = `Last pulse: ${d.meta.lastOverall.toFixed(1)}`;
+        $('riskPill').innerHTML = `<i class="fas fa-shield-alt" aria-hidden="true"></i> ${d.risk}`;
+
+        $('execSummary').textContent = d.summary;
+        setList($('whatsWorking'), d.working);
+        setList($('topBlockers'), d.blockers);
+
+        $('respCount').textContent = d.meta.responses;
+        $('respRate').textContent = `${d.meta.responseRate}%`;
+        $('confidenceLabel').textContent = d.confidence;
+        $('topOpportunity').textContent = d.topOpportunity;
+
+        // KPI deltas
+        $('kpiEngDelta').textContent = d.deltas.engagement;
+        $('kpiNpsDelta').textContent = d.deltas.enps;
+        $('kpiRiskDelta').textContent = d.deltas.risk;
+        $('kpiTrustDelta').textContent = d.deltas.trust;
+
+        // Sentiment
+        $('valPos').textContent = d.sentiment.pos;
+        $('valNeu').textContent = d.sentiment.neu;
+        $('valNeg').textContent = d.sentiment.neg;
+        $('barPos').style.setProperty('--val', d.sentiment.pos);
+        $('barNeu').style.setProperty('--val', d.sentiment.neu);
+        $('barNeg').style.setProperty('--val', d.sentiment.neg);
+        $('calloutInsight').textContent = d.insight;
+
+        // Participation stack
+        const stack = $('deptStack');
+        stack.innerHTML = '';
+        const total = d.participation.reduce((s,x)=>s+x.n,0);
+        d.participation.forEach(row => {
+          const pct = total ? Math.round((row.n/total)*100) : 0;
+          const wrap = document.createElement('div');
+          wrap.className = 'stacked-row';
+          wrap.style.setProperty('--w', `${pct}%`);
+          wrap.innerHTML = `
+            <div class="stacked-top"><span>${row.dept}</span><span>${row.n} • ${pct}%</span></div>
+            <div class="stacked-bar" aria-hidden="true"><span></span></div>
+          `;
+          stack.appendChild(wrap);
+        });
+
+        // Trend chart
+        renderTrendChart(d.trend);
+        renderTrendInsights(d.trend);
+
+        // Animate count-ups
+        animateCountUp($('kpiEng'), d.kpis.engagement);
+        animateCountUp($('kpiNps'), d.kpis.enps);
+        animateCountUp($('kpiRisk'), d.kpis.risk);
+        animateCountUp($('kpiTrust'), d.kpis.trust);
+      }
+
+      // -------------------------
+      // Trend chart (SVG)
+      // -------------------------
+      const trendState = { show: { engagement:true, trust:true, risk:true } };
+
+      function renderTrendLegend() {
+        const legend = $('trendLegend');
+        legend.innerHTML = '';
+        const items = [
+          { key:'engagement', label:'Engagement', dot:'var(--primary)'} ,
+          { key:'trust', label:'Manager Trust', dot:'var(--accent)'},
+          { key:'risk', label:'Turnover Risk', dot:'rgba(217, 119, 6, 1)'}
+        ];
+        items.forEach(it => {
+          const b = document.createElement('div');
+          b.className = 'legend-item' + (trendState.show[it.key] ? '' : ' off');
+          b.innerHTML = `<span class="legend-dot" style="background:${it.dot}"></span>${it.label}`;
+          b.addEventListener('click', () => {
+            trendState.show[it.key] = !trendState.show[it.key];
+            renderTrendLegend();
+            renderTrendInsights(getDeptData().trend);
+            renderTrendChart(getDeptData().trend);
+          });
+          legend.appendChild(b);
+        });
+      }
+
+
+      function renderTrendInsights(trend) {
+        const el = $('trendInsights');
+        if (!el) return;
+
+        // Compute simple deltas
+        const first = trend[0];
+        const last = trend[trend.length - 1];
+        const dEng = (last.engagement - first.engagement);
+        const dTrust = (last.trust - first.trust);
+        const dRisk = (last.risk - first.risk);
+
+        // Find biggest quarter-to-quarter movement (engagement)
+        let bestJump = { from:'', to:'', delta:0 };
+        for (let i=1;i<trend.length;i++) {
+          const delta = trend[i].engagement - trend[i-1].engagement;
+          if (delta > bestJump.delta) {
+            bestJump = { from: trend[i-1].label, to: trend[i].label, delta };
+          }
+        }
+
+        const riskDir = dRisk <= 0 ? 'down' : 'up';
+        const riskBadge = dRisk <= 0 ? 'Improving' : 'Watch';
+
+        const fmt = (n) => (n >= 0 ? `+${n.toFixed(1)}` : `${n.toFixed(1)}`);
+        const fmtPts = (n) => (n >= 0 ? `+${n}` : `${n}`);
+
+        el.innerHTML = `
+          <div class="trend-insight">
+            <div class="k"><i class="fas fa-arrow-trend-up" aria-hidden="true"></i> Momentum <span class="badge">${fmt(dEng)} pts</span></div>
+            <div class="v">Engagement moved <strong>${fmt(dEng)} points</strong> from <strong>${first.label}</strong> to <strong>${last.label}</strong>. Biggest jump was <strong>${bestJump.from} → ${bestJump.to}</strong> (${fmt(bestJump.delta)}).</div>
+          </div>
+          <div class="trend-insight">
+            <div class="k"><i class="fas fa-user-check" aria-hidden="true"></i> Trust & Follow-through <span class="badge">${fmt(dTrust)} pts</span></div>
+            <div class="v">Manager Trust changed <strong>${fmt(dTrust)} points</strong>. The most common driver in comments: clearer priorities plus faster closure on recurring blockers.</div>
+          </div>
+          <div class="trend-insight">
+            <div class="k"><i class="fas fa-triangle-exclamation" aria-hidden="true"></i> Turnover Risk <span class="badge">${riskBadge}</span></div>
+            <div class="v">Turnover risk is <strong>${riskDir}</strong> <strong>${Math.abs(dRisk)} points</strong> since ${first.label}. Focus on the top two themes (handoffs + parts readiness) to keep risk trending down.</div>
+          </div>
+        `;
+      }
+
+      function renderTrendChart(trend) {
+        const container = $('trendChart');
+        container.innerHTML = '';
+        container.style.position = 'relative';
+
+        const W = 720;
+        const H = 240;
+        const pad = { l: 42, r: 20, t: 18, b: 34 };
+        const innerW = W - pad.l - pad.r;
+        const innerH = H - pad.t - pad.b;
+
+        // Scales: scores 3.4-4.6 for engagement/trust, risk 6-20
+        const yScoreMin = 3.4;
+        const yScoreMax = 4.6;
+        const yRiskMin = 6;
+        const yRiskMax = 20;
+
+        function x(i){
+          const n = Math.max(1, trend.length - 1);
+          return pad.l + (innerW * (i / n));
+        }
+        function yScore(v){
+          const t = (v - yScoreMin) / (yScoreMax - yScoreMin);
+          return pad.t + innerH - (innerH * clamp(t,0,1));
+        }
+        function yRisk(v){
+          const t = (v - yRiskMin) / (yRiskMax - yRiskMin);
+          return pad.t + innerH - (innerH * clamp(t,0,1));
+        }
+
+        const svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
+        svg.setAttribute('width', '100%');
+        svg.setAttribute('height', '100%');
+        svg.style.display = 'block';
+
+        // Grid
+        for (let i=0;i<=4;i++){
+          const yy = pad.t + (innerH * (i/4));
+          const line = document.createElementNS(svg.namespaceURI,'line');
+          line.setAttribute('x1', pad.l);
+          line.setAttribute('x2', W - pad.r);
+          line.setAttribute('y1', yy);
+          line.setAttribute('y2', yy);
+          line.setAttribute('stroke', 'rgba(148,163,184,0.35)');
+          line.setAttribute('stroke-width', '1');
+          svg.appendChild(line);
+        }
+
+        // Axis labels
+        const yLabel = document.createElementNS(svg.namespaceURI,'text');
+        yLabel.setAttribute('x', 8);
+        yLabel.setAttribute('y', 22);
+        yLabel.setAttribute('fill', 'rgba(71,85,105,0.85)');
+        yLabel.setAttribute('font-size', '12');
+        yLabel.textContent = 'Score';
+        svg.appendChild(yLabel);
+
+        const rLabel = document.createElementNS(svg.namespaceURI,'text');
+        rLabel.setAttribute('x', W - 54);
+        rLabel.setAttribute('y', 22);
+        rLabel.setAttribute('fill', 'rgba(217,119,6,0.95)');
+        rLabel.setAttribute('font-size', '12');
+        rLabel.textContent = 'Risk%';
+        svg.appendChild(rLabel);
+
+        // X ticks
+        trend.forEach((p, i) => {
+          const tx = document.createElementNS(svg.namespaceURI,'text');
+          tx.setAttribute('x', x(i));
+          tx.setAttribute('y', H - 12);
+          tx.setAttribute('text-anchor', 'middle');
+          tx.setAttribute('fill', 'rgba(71,85,105,0.85)');
+          tx.setAttribute('font-size', '12');
+          tx.textContent = p.label;
+          svg.appendChild(tx);
+        });
+
+        function pathFor(key, yFn){
+          return trend.map((p,i)=>`${i===0?'M':'L'} ${x(i)} ${yFn(p[key])}`).join(' ');
+        }
+
+        function addArea(key, yFn, fill) {
+          // Subtle filled area for the primary series (professional, low contrast)
+          const baseY = pad.t + innerH;
+          const d = trend.map((p,i)=>`${i===0?'M':'L'} ${x(i)} ${yFn(p[key])}`).join(' ') +
+                    ` L ${x(trend.length-1)} ${baseY} L ${x(0)} ${baseY} Z`;
+          const area = document.createElementNS(svg.namespaceURI,'path');
+          area.setAttribute('d', d);
+          area.setAttribute('fill', fill);
+          area.setAttribute('stroke', 'none');
+          svg.appendChild(area);
+          return area;
+        }
+
+        function addPath(d, stroke){
+          const p = document.createElementNS(svg.namespaceURI,'path');
+          p.setAttribute('d', d);
+          p.setAttribute('fill', 'none');
+          p.setAttribute('stroke', stroke);
+          p.setAttribute('stroke-width', '3');
+          p.setAttribute('stroke-linecap', 'round');
+          p.setAttribute('stroke-linejoin', 'round');
+          svg.appendChild(p);
+
+          // Draw-on animation
+          try {
+            const len = p.getTotalLength();
+            p.style.strokeDasharray = String(len);
+            p.style.strokeDashoffset = String(len);
+            p.style.animation = 'trendDraw 900ms cubic-bezier(.2,.9,.2,1) forwards';
+          } catch {}
+
+          return p;
+        }
+
+        const series = {};
+        if (trendState.show.engagement) {
+          addArea('engagement', yScore, 'rgba(30, 58, 138, 0.10)');
+          series.engagement = addPath(pathFor('engagement', yScore), 'var(--primary)');
+        }
+        if (trendState.show.trust) {
+          series.trust = addPath(pathFor('trust', yScore), 'var(--accent)');
+        }
+        if (trendState.show.risk) {
+          series.risk = addPath(pathFor('risk', yRisk), 'rgba(217, 119, 6, 1)');
+        }
+
+        function labelLast(key, yFn, text, color) {
+          const lastIndex = trend.length - 1;
+          const last = trend[lastIndex];
+          const tx = document.createElementNS(svg.namespaceURI,'text');
+          tx.setAttribute('x', x(lastIndex) + 10);
+          tx.setAttribute('y', yFn(last[key]) + 4);
+          tx.setAttribute('fill', color);
+          tx.setAttribute('font-size', '12');
+          tx.setAttribute('font-weight', '800');
+          tx.textContent = text;
+          svg.appendChild(tx);
+        }
+
+        if (series.engagement) labelLast('engagement', yScore, trend[trend.length-1].engagement.toFixed(1), 'var(--primary)');
+        if (series.trust) labelLast('trust', yScore, trend[trend.length-1].trust.toFixed(1), 'var(--accent)');
+        if (series.risk) labelLast('risk', yRisk, `${trend[trend.length-1].risk}%`, 'rgba(217, 119, 6, 1)');
+
+        // Points for tooltip
+        const tooltip = document.createElement('div');
+        tooltip.className = 'chart-tooltip';
+        container.appendChild(tooltip);
+
+        trend.forEach((p,i)=>{
+          const cx = x(i);
+          const items = [];
+          if (trendState.show.engagement) items.push({ label:'Engagement', v:p.engagement.toFixed(1), y:yScore(p.engagement), c:'var(--primary)' });
+          if (trendState.show.trust) items.push({ label:'Trust', v:p.trust.toFixed(1), y:yScore(p.trust), c:'var(--accent)' });
+          if (trendState.show.risk) items.push({ label:'Risk', v:`${p.risk}%`, y:yRisk(p.risk), c:'rgba(217, 119, 6, 1)' });
+
+          items.forEach(it => {
+            const c = document.createElementNS(svg.namespaceURI,'circle');
+            c.setAttribute('cx', cx);
+            c.setAttribute('cy', it.y);
+            c.setAttribute('r', '5');
+            c.setAttribute('fill', 'white');
+            c.setAttribute('stroke', it.c);
+            c.setAttribute('stroke-width', '3');
+            c.style.cursor = 'default';
+
+            c.addEventListener('mouseenter', () => {
+              tooltip.innerHTML = `<div style="font-weight:900;color:var(--gray-900)">${p.label}</div>` +
+                items.map(ii => `<div style="display:flex;justify-content:space-between;gap:0.75rem"><span style="font-weight:800;color:var(--gray-700)">${ii.label}</span><span style="font-weight:900;color:var(--gray-900)">${ii.v}</span></div>`).join('');
+              tooltip.classList.add('show');
+            });
+            c.addEventListener('mousemove', (e) => {
+              const rect = container.getBoundingClientRect();
+              const left = clamp(e.clientX - rect.left + 12, 8, rect.width - 160);
+              const top = clamp(e.clientY - rect.top - 10, 8, rect.height - 90);
+              tooltip.style.left = left + 'px';
+              tooltip.style.top = top + 'px';
+            });
+            c.addEventListener('mouseleave', () => tooltip.classList.remove('show'));
+
+            svg.appendChild(c);
+          });
+        });
+
+        container.appendChild(svg);
+        renderTrendLegend();
+
+        // Animate stacked + bars
+        requestAnimationFrame(() => {
+          $$('#sample-report .stacked-row').forEach(el => el.classList.add('is-animated'));
+          $$('#sample-report .bar').forEach(el => el.classList.add('is-animated'));
+        });
+      }
+
+      // -------------------------
+      // Drivers
+      // -------------------------
+      function renderDrivers(d) {
+        const list = $('driverList');
+        list.innerHTML = '';
+
+        const drivers = [...d.drivers];
+        drivers.sort((a,b) => (b[driverView] - a[driverView]));
+
+        drivers.forEach((drv, idx) => {
+          const row = document.createElement('div');
+          row.className = 'driver-row';
+          row.dataset.id = drv.id;
+          row.style.setProperty('--w', `${drv[driverView]}%`);
+          row.innerHTML = `
+            <div>
+              <div class="driver-name">${drv.name}</div>
+              <div class="driver-sub">${drv.why}</div>
+              <div class="driver-bar" aria-hidden="true"><span></span></div>
+            </div>
+            <div class="driver-score">${drv[driverView]}</div>
+          `;
+          row.addEventListener('click', () => selectDriver(d, drv.id));
+          list.appendChild(row);
+
+          // Auto-select first
+          if (idx === 0) setTimeout(() => selectDriver(d, drv.id), 0);
+        });
+
+        requestAnimationFrame(() => {
+          $$('#sample-report .driver-row').forEach(el => el.classList.add('is-animated'));
+        });
+      }
+
+      function selectDriver(d, id) {
+        const drv = d.drivers.find(x => x.id === id);
+        if (!drv) return;
+        $$('#sample-report .driver-row').forEach(r => r.classList.toggle('active', r.dataset.id === id));
+
+        $('driverDetailTitle').textContent = drv.name;
+        $('driverDetailSub').textContent = drv.why;
+
+        $('driverMetrics').innerHTML = `
+          <div class="metric-chip"><div class="k">Impact</div><div class="v">${drv.impact}</div></div>
+          <div class="metric-chip"><div class="k">Gap</div><div class="v">${drv.gap}</div></div>
+          <div class="metric-chip"><div class="k">Momentum</div><div class="v">${drv.momentum}</div></div>
+        `;
+
+        setList($('driverActions'), drv.actions);
+
+        const chips = $('driverQuestions');
+        chips.innerHTML = '';
+        drv.affected.forEach(qid => {
+          const q = d.questions.find(x => x.id === qid);
+          const span = document.createElement('span');
+          span.className = 'chip';
+          span.textContent = q ? `${qid}: ${q.score.toFixed(1)}` : qid;
+          span.title = q ? q.text : qid;
+          chips.appendChild(span);
+        });
+      }
+
+      // Driver view pills
+      $$('#sample-report [data-driver-view]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          driverView = btn.getAttribute('data-driver-view');
+          $$('#sample-report [data-driver-view]').forEach(b => b.classList.toggle('active', b === btn));
+          renderDrivers(getDeptData());
+        });
+      });
+
+      // -------------------------
+      // Questions
+      // -------------------------
+      function renderQuestionCategories(d) {
+        const cats = Array.from(new Set(d.questions.map(q => q.cat))).sort();
+        const sel = $('qCategory');
+        sel.innerHTML = '<option value="All" selected>All</option>';
+        cats.forEach(c => {
+          const o = document.createElement('option');
+          o.value = c;
+          o.textContent = c;
+          sel.appendChild(o);
+        });
+      }
+
+      function renderQuestions(d) {
+        const list = $('questionList');
+        list.innerHTML = '';
+
+        const query = ($('qSearch').value || '').trim().toLowerCase();
+        const cat = $('qCategory').value;
+
+        const filtered = d.questions
+          .filter(q => cat === 'All' ? true : q.cat === cat)
+          .filter(q => !query ? true : (q.text.toLowerCase().includes(query) || q.cat.toLowerCase().includes(query) || q.id.toLowerCase().includes(query)))
+          .sort((a,b) => (b.score - a.score));
+
+        filtered.forEach(q => {
+          const acc = document.createElement('div');
+          acc.className = 'accordion';
+          const delta = q.delta || 0;
+          const deltaCls = delta < 0 ? 'neg' : '';
+          acc.innerHTML = `
+            <div class="accordion-head" role="button" tabindex="0" aria-expanded="false">
+              <div>
+                <div class="q-title">${q.id} • ${q.text}</div>
+                <div class="report-muted-small">${q.cat}</div>
+              </div>
+              <div class="q-meta">
+                <span class="q-score">${q.score.toFixed(1)}/5</span>
+                <span class="q-delta ${deltaCls}">${formatDelta(delta)}</span>
+                <i class="fas fa-chevron-down" aria-hidden="true" style="color: var(--gray-500);"></i>
+              </div>
+            </div>
+            <div class="accordion-body">
+              <div class="accordion-body-inner">
+                <div class="subcard">
+                  <div class="subcard-title">Distribution (1–5)</div>
+                  <div class="dist">
+                    ${q.dist.map((v,i)=>`<div class="dist-item"><div class="n">${v}%</div><div class="l">${i+1}</div></div>`).join('')}
+                  </div>
+                </div>
+                <div class="subcard">
+                  <div class="subcard-title">Interpretation</div>
+                  <p class="report-muted" style="margin:0;">Scores below <strong>3.7</strong> often indicate operational friction. Use the Drivers tab to see what moves overall engagement fastest.</p>
+                </div>
+              </div>
+            </div>
+          `;
+
+          const head = acc.querySelector('.accordion-head');
+          const toggle = () => {
+            const open = acc.classList.toggle('open');
+            head.setAttribute('aria-expanded', open ? 'true' : 'false');
+          };
+          head.addEventListener('click', toggle);
+          head.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); toggle(); }
+          });
+
+          list.appendChild(acc);
+        });
+
+        if (filtered.length === 0) {
+          const empty = document.createElement('div');
+          empty.className = 'report-muted';
+          empty.textContent = 'No questions match your filters.';
+          list.appendChild(empty);
+        }
+      }
+
+      $('qSearch').addEventListener('input', () => renderQuestions(getDeptData()));
+      $('qCategory').addEventListener('change', () => renderQuestions(getDeptData()));
+
+      // -------------------------
+      // Themes + drawer
+      // -------------------------
+      let quoteIndex = 0;
+      function renderThemes(d) {
+        const themeList = $('themeList');
+        themeList.innerHTML = '';
+
+        d.themes.forEach(th => {
+          const row = document.createElement('div');
+          row.className = 'theme-row';
+          row.dataset.id = th.id;
+          row.style.setProperty('--w', th.w + '%');
+          row.innerHTML = `
+            <div>
+              <div class="theme-title">${th.title}</div>
+              <div class="theme-sub">${th.sub}</div>
+            </div>
+            <div class="theme-meter" aria-label="Theme weight meter"><span></span></div>
+            <div class="theme-weight">${th.w}</div>
+          `;
+          row.addEventListener('click', () => openThemeDrawer(d, th.id));
+          themeList.appendChild(row);
+        });
+
+        requestAnimationFrame(() => {
+          $$('#sample-report .theme-row').forEach(el => el.classList.add('is-animated'));
+        });
+
+        // Quote carousel from mixed theme quotes
+        const q = d.themes.flatMap(t => t.quotes).slice(0, 6);
+        $('quote0').textContent = q[0] || '—';
+        $('quote1').textContent = q[1] || '—';
+        $('quote2').textContent = q[2] || '—';
+        quoteIndex = 0;
+        showQuote(0);
+      }
+
+      function showQuote(i) {
+        const quotes = [ $('quote0'), $('quote1'), $('quote2') ];
+        quotes.forEach((q, idx) => q.classList.toggle('active', idx === i));
+      }
+
+      $('prevQuote').addEventListener('click', () => {
+        quoteIndex = (quoteIndex - 1 + 3) % 3;
+        showQuote(quoteIndex);
+      });
+      $('nextQuote').addEventListener('click', () => {
+        quoteIndex = (quoteIndex + 1) % 3;
+        showQuote(quoteIndex);
+      });
+
+      function openThemeDrawer(d, id) {
+        const th = d.themes.find(t => t.id === id);
+        if (!th) return;
+
+        $('drawerTitle').textContent = th.title;
+        $('drawerSub').textContent = th.sub;
+
+        $('drawerMetrics').innerHTML = `
+          <div class="metric-chip"><div class="k">Weight</div><div class="v">${th.w}</div></div>
+          <div class="metric-chip"><div class="k">Mentions</div><div class="v">${th.freq}</div></div>
+          <div class="metric-chip"><div class="k">Negativity</div><div class="v">${th.neg}%</div></div>
+        `;
+
+        setList($('drawerQuotes'), th.quotes);
+        setList($('drawerActions'), th.actions);
+
+        const drawer = $('themeDrawer');
+        drawer.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeDrawer() {
+        const drawer = $('themeDrawer');
+        if (!drawer) return;
+        drawer.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+
+      $$('#sample-report [data-drawer-close]').forEach(el => el.addEventListener('click', closeDrawer));
+
+      // -------------------------
+      // Actions + local tracking
+      // -------------------------
+      function renderActions(d) {
+        const host = $('actionRows');
+        host.innerHTML = '';
+
+        const saved = loadActionState();
+        const merged = d.actions.map(a => {
+          const key = `${dept}_${a.id}`;
+          const status = saved[key] || a.status;
+          return { ...a, status };
+        });
+
+        const show = merged.filter(a => actionFilter === 'All' ? true : a.status === actionFilter);
+
+        show.forEach(a => {
+          const row = document.createElement('div');
+          row.className = 'action-row';
+          row.setAttribute('role','row');
+
+          const due = new Date(a.due + 'T00:00:00');
+          const dueLabel = due.toLocaleDateString(undefined, { year:'numeric', month:'short', day:'numeric' });
+
+          row.innerHTML = `
+            <div role="cell"><strong>${a.title}</strong></div>
+            <div role="cell">${a.owner}</div>
+            <div role="cell">${dueLabel}</div>
+            <div role="cell"><span class="chip">${a.effort}</span></div>
+            <div role="cell"><span class="chip ${a.impact==='High'?'chip-good':''}">${a.impact}</span></div>
+            <div role="cell">
+              <select class="status-select" aria-label="Status for ${a.id}" data-action-id="${a.id}">
+                ${['Not Started','In Progress','Done'].map(s => `<option value="${s}" ${s===a.status?'selected':''}>${s}</option>`).join('')}
+              </select>
+            </div>
+          `;
+
+          host.appendChild(row);
+        });
+
+        // Wire status changes
+        $$('#sample-report .status-select').forEach(sel => {
+          sel.addEventListener('change', (e) => {
+            const id = e.target.getAttribute('data-action-id');
+            const state = loadActionState();
+            const key = `${dept}_${id}`;
+            state[key] = e.target.value;
+            saveActionState(state);
+            renderActions(getDeptData());
+          });
+        });
+      }
+
+      $$('#sample-report [data-action-filter]').forEach(btn => {
+        btn.addEventListener('click', () => {
+          actionFilter = btn.getAttribute('data-action-filter');
+          $$('#sample-report [data-action-filter]').forEach(b => b.classList.toggle('active', b === btn));
+          renderActions(getDeptData());
+        });
+      });
+
+      function renderSuccessMetrics(d) {
+        setList($('successMetrics'), d.successMetrics);
+      }
+
+      // -------------------------
+      // Timeline
+      // -------------------------
+      function renderTimeline(d) {
+        const host = $('timelineList');
+        host.innerHTML = '';
+        const blocks = [
+          { title:'First 30 Days', items: d.timeline.d30 },
+          { title:'Days 31–60', items: d.timeline.d60 },
+          { title:'Days 61–90', items: d.timeline.d90 }
+        ];
+        blocks.forEach(b => {
+          const wrap = document.createElement('div');
+          wrap.className = 'timeline-item';
+          wrap.innerHTML = `
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <div class="timeline-title">${b.title}</div>
+              <ul>${b.items.map(x => `<li>${x}</li>`).join('')}</ul>
+            </div>
+          `;
+          host.appendChild(wrap);
+        });
+        $('privacyNote').textContent = d.privacyNote;
+      }
+
+      // -------------------------
+      // Tabs
+      // -------------------------
+      const tabs = $$('.report-tab', root);
+      const panels = {
+        overview: $('panel-overview'),
+        drivers: $('panel-drivers'),
+        questions: $('panel-questions'),
+        themes: $('panel-themes'),
+        actions: $('panel-actions'),
+        timeline: $('panel-timeline'),
+        appendix: $('panel-appendix')
+      };
+
+      function setActiveTab(key) {
+        tabs.forEach(t => {
+          const active = t.dataset.tab === key;
+          t.classList.toggle('active', active);
+          t.setAttribute('aria-selected', active ? 'true' : 'false');
+        });
+        Object.entries(panels).forEach(([k,p]) => {
+          const active = k === key;
+          p.classList.toggle('active', active);
+          p.hidden = !active;
+        });
+
+        // Re-trigger lightweight animations
+        if (key === 'overview') {
+          $$('#sample-report .bar').forEach(el => el.classList.remove('is-animated'));
+          $$('#sample-report .stacked-row').forEach(el => el.classList.remove('is-animated'));
+          requestAnimationFrame(() => {
+            $$('#sample-report .bar').forEach(el => el.classList.add('is-animated'));
+            $$('#sample-report .stacked-row').forEach(el => el.classList.add('is-animated'));
+          });
+        }
+        if (key === 'drivers') {
+          $$('#sample-report .driver-row').forEach(el => el.classList.remove('is-animated'));
+          requestAnimationFrame(() => $$('#sample-report .driver-row').forEach(el => el.classList.add('is-animated')));
+        }
+        if (key === 'themes') {
+          $$('#sample-report .theme-row').forEach(el => el.classList.remove('is-animated'));
+          requestAnimationFrame(() => $$('#sample-report .theme-row').forEach(el => el.classList.add('is-animated')));
+        }
+      }
+
+      tabs.forEach(t => t.addEventListener('click', () => setActiveTab(t.dataset.tab)));
+
+      // -------------------------
+      // Dept/Period controls
+      // -------------------------
+      $('deptSelect').addEventListener('change', (e) => {
+        dept = e.target.value;
+        rerender();
+      });
+      $('periodSelect').addEventListener('change', (e) => {
+        period = e.target.value;
+        // In this sample, period changes meta only. (In real delivery it changes the dataset.)
+        rerender();
+      });
+
+      // -------------------------
+      // Copy summary
+      // -------------------------
+      $('copySummaryBtn').addEventListener('click', async () => {
+        const d = getDeptData();
+        const text =
+`Axiom Sample Report — ${dept}
+` +
+`Period: ${period}
+` +
+`Overall: ${d.overall.toFixed(1)}/5 • Risk: ${d.risk}
+
+` +
+`Executive Summary:
+${d.summary}
+
+` +
+`Top Blockers:
+- ${d.blockers.join('\n- ')}
+
+` +
+`Top Opportunity:
+- ${d.topOpportunity}
+`;
+
+        try {
+          await navigator.clipboard.writeText(text);
+          const btn = $('copySummaryBtn');
+          const old = btn.innerHTML;
+          btn.innerHTML = '<i class="fas fa-check"></i> Copied';
+          setTimeout(() => (btn.innerHTML = old), 1400);
+        } catch {
+          alert('Copy failed in this browser.');
+        }
+      });
+
+      // -------------------------
+      // Export
+      // -------------------------
+      function downloadFile(filename, content, mime) {
+        const blob = new Blob([content], { type: mime });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = filename;
+        document.body.appendChild(a);
+        a.click();
+        a.remove();
+        URL.revokeObjectURL(url);
+      }
+
+      $('exportJsonBtn').addEventListener('click', () => {
+        const d = getDeptData();
+        const payload = {
+          department: dept,
+          period,
+          overall: d.overall,
+          risk: d.risk,
+          kpis: d.kpis,
+          deltas: d.deltas,
+          summary: d.summary,
+          blockers: d.blockers,
+          actions: d.actions,
+          themes: d.themes
+        };
+        downloadFile(`axiom_sample_report_${dept}_${period}.json`, JSON.stringify(payload, null, 2), 'application/json');
+      });
+
+      $('exportCsvBtn').addEventListener('click', () => {
+        const d = getDeptData();
+        const saved = loadActionState();
+        const rows = d.actions.map(a => {
+          const status = saved[`${dept}_${a.id}`] || a.status;
+          return { ...a, status };
+        });
+        const header = ['id','title','owner','due','effort','impact','status'];
+        const csv = [header.join(',')].concat(
+          rows.map(r => header.map(k => String(r[k]).replaceAll('"','""')).map(v => `"${v}"`).join(','))
+        ).join('\n');
+        downloadFile(`axiom_actions_${dept}_${period}.csv`, csv, 'text/csv');
+      });
+
+      // -------------------------
+      // Modal
+      // -------------------------
+      function openModal() {
+        $('methodologyModal').setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      }
+      function closeModal() {
+        $('methodologyModal').setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      }
+      $('methodologyBtn').addEventListener('click', openModal);
+      $$('#sample-report [data-modal-close]').forEach(el => el.addEventListener('click', closeModal));
+
+      // ESC closes modal/drawer
+      document.addEventListener('keydown', (e) => {
+        if (e.key !== 'Escape') return;
+        const modalOpen = $('methodologyModal')?.getAttribute('aria-hidden') === 'false';
+        const drawerOpen = $('themeDrawer')?.getAttribute('aria-hidden') === 'false';
+        if (drawerOpen) closeDrawer();
+        if (modalOpen) closeModal();
+      });
+
+      // -------------------------
+      // Rerender
+      // -------------------------
+      function rerender() {
+        const d = getDeptData();
+        renderOverview(d);
+        renderDrivers(d);
+        renderQuestionCategories(d);
+        renderQuestions(d);
+        renderThemes(d);
+        renderActions(d);
+        renderSuccessMetrics(d);
+        renderTimeline(d);
+      }
+
+      // Initial
+      rerender();
+      setActiveTab('overview');
+
+    })();
+
+
+    // Add intersection observer for scroll animations
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, observerOptions);
+
+    // Observe elements for animation
+    document.querySelectorAll('.feature-card, .process-step, .testimonial, .service-card, .report-card, .theme-row, .timeline-item').forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>
